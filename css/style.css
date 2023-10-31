@@ -1,23 +1,54 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.main-index{
+
+.main-index {
     height: 58vh;
-   
+
 }
-.navbar-index{
-background-color: black;
-font-size: 3vh;
+
+.navbar-index {
+    background-color: black;
+    font-size: 3vh;
 }
-.body-index{ 
+
+.body-index {
     background-image: url(/IMAGENES/mojito.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;}
+    background-size: 100% 100%;
+}
 
-    .boton-reg-log{
-        min-height: 25vh;
-        min-width:20vw;
-        margin-top: 30vh;
-        margin-left:60vw ;}
+.boton-reg-log {
+    min-height: 25vh;
+    min-width: 20vw;
+    margin-top: 30vh;
+    margin-left: 60vw;
+}
+
+.navbar-admin {
+    text-decoration: none;
+    background-color: black;
+    height: auto;
+    width: 15vw;
+    min-height: 100vh;
+}
+
+.lista-navbar-admin {
+    list-style: none;
+    font-size: 200%;
+}
+
+.lista-navbar-admin a {
+    text-decoration: none;
+    color: white;
+}
+
+.lista-ingredientes{
+    list-style: none;
+}
+.tablaBotellasAdmin{
+    width: 80vw;
+}
+
