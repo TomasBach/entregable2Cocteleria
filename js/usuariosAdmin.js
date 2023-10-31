@@ -12,5 +12,5 @@ if(usuariosLs.length === 0){
     },
    
 ]
-localStorage.setItem('usuarios', JSON.stringify(usuariosLs))
+localStorage.setItem('usuarios', JSON.stringify(usuariosObj))
 }
