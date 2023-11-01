@@ -36,32 +36,32 @@ tBodyTragosAdmin.innerHTML = tragos.map((trago) =>
                   <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="inputNameTrago" aria-describedby="emailHelp" value="${trago.name}" name="nameTrago">
+                      <input type="text" class="form-control inputNameTrago"  aria-describedby="emailHelp" value="${trago.name}" name="nameTrago">
                     </div>
                     <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Imagen</label>
-                    <input type="text" class="form-control" id="inputImgTrago" aria-describedby="emailHelp" value="Por ej: ${trago.img}" name="imagTrago">
+                    <input type="text" class="form-control inputImgTrago"  aria-describedby="emailHelp" value="Por ej: ${trago.img}" name="imagTrago">
                   </div>
                     <h5 class="text-center">Ingrese los ingredientes del trago </h5>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 1</label>
-                      <input type="text" class="form-control" id="inputIngrediente1" aria-describedby="emailHelp" value="${trago.ingred.ingred1}" name="ingrediente1">
+                      <input type="text" class="form-control inputIngred1" aria-describedby="emailHelp" value="${trago.ingred.ingred1}" name="ingrediente1">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 2</label>
-                      <input type="text" class="form-control" id="inputIngrediente2" aria-describedby="emailHelp" value="${trago.ingred.ingred2}" name="ingrediente2">
+                      <input type="text" class="form-control inputIngred2"  aria-describedby="emailHelp" value="${trago.ingred.ingred2}" name="ingrediente2">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 3</label>
-                      <input type="text" class="form-control" id="inputIngrediente3" aria-describedby="emailHelp" value="${trago.ingred.ingred3}" name="ingrediente3">
+                      <input type="text" class="form-control inputIngred3" aria-describedby="emailHelp" value="${trago.ingred.ingred3}" name="ingrediente3">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 4</label>
-                      <input type="text" class="form-control" id="inputIngrediente4" aria-describedby="emailHelp" value="${trago.ingred.ingred4}" name="ingrediente4">
+                      <input type="text" class="form-control inputIngred4" aria-describedby="emailHelp" value="${trago.ingred.ingred4}" name="ingrediente4">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 5</label>
-                      <input type="text" class="form-control" id="inputIngrediente5" aria-describedby="emailHelp" value="${trago.ingred.ingred5}" name="ingrediente5">
+                      <input type="text" class="form-control inputIngred5" aria-describedby="emailHelp" value="${trago.ingred.ingred5}" name="ingrediente5">
                     </div>
                     
                     
@@ -79,13 +79,13 @@ tBodyTragosAdmin.innerHTML = tragos.map((trago) =>
     `
 ).join('')
 
-const inputNameTrago = document.getElementById('inputNameTrago')
-const inputImgTrago = document.getElementById('inputImgTrago')
-const inputIngrediente1 = document.getElementById('inputIngrediente1')
-const inputIngrediente2 = document.getElementById('inputIngrediente2')
-const inputIngrediente3 = document.getElementById('inputIngrediente3')
-const inputIngrediente4 = document.getElementById('inputIngrediente4')
-const inputIngrediente5 = document.getElementById('inputIngrediente5')
+const inputNameTrago= document.querySelectorAll(".inputNameTrago")
+const inputImgTrago = document.querySelectorAll(".inputImgTrago")
+const inputIngrediente1 = document.querySelectorAll(".inputIngred1")
+const inputIngrediente2 = document.querySelectorAll(".inputIngred2")
+const inputIngrediente3 = document.querySelectorAll(".inputIngred3")
+const inputIngrediente4 = document.querySelectorAll(".inputIngred4")
+const inputIngrediente5 = document.querySelectorAll(".inputIngred5")
 
 const dataForm = {
   nameTrago: '',
@@ -136,25 +136,40 @@ const tragoDestacado = (idTrago) => {
   let tragoDest = JSON.parse(localStorage.getItem('tragoDest')) || []
   if (tragoDest.length > 0) {
     if (idTrago !== tragoDest[0].id) {
-      const confirmCambioDest = confirm('Estas seguro de que quieres reemplazar el trago destacado?')
-      if (confirmCambioDest) {
+    const confirmCambioDest = confirm('Estas seguro de que quieres reemplazar el trago destacado?')  
+    if (confirmCambioDest) {
         const tragFilter = tragos.filter((trago) => trago.id === idTrago)
-        localStorage.setItem('tragoDest', JSON.stringify(tragFilter))
+        tragoDest = tragFilter
+        localStorage.setItem('tragoDest', JSON.stringify(tragoDest))
       }
     } else { alert('este trago esta destacado') }
   } else {
     const tragFilter = tragos.filter((trago) => trago.id === idTrago)
-    tragoDest = tragFilter
-    tragoDest.push(tragoDest[0])
+    tragoDest.push(tragFilter[0])
     localStorage.setItem('tragoDest', JSON.stringify(tragoDest))
   }
 }
 
-inputNameTrago.addEventListener('input', changeValues)
-inputImgTrago.addEventListener('input', changeValues)
-inputIngrediente1.addEventListener('input', changeValues)
-inputIngrediente2.addEventListener('input', changeValues)
-inputIngrediente3.addEventListener('input', changeValues)
-inputIngrediente4.addEventListener('input', changeValues)
-inputIngrediente5.addEventListener('input', changeValues)
+inputNameTrago.forEach( element => {
+  element.addEventListener('input', changeValues)
+});
+inputImgTrago.forEach(element => {
+  element.addEventListener('input', changeValues)
+});
+inputIngrediente1.forEach(element => {
+  element.addEventListener('input', changeValues)
+});
+inputIngrediente2.forEach(element => {
+  element.addEventListener('input', changeValues)
+});
+inputIngrediente3.forEach(element => {
+  element.addEventListener('input', changeValues)
+});
+inputIngrediente4.forEach(element => {
+  element.addEventListener('input', changeValues)
+});
+inputIngrediente5.forEach(element => {
+  element.addEventListener('input', changeValues)
+});
+
 

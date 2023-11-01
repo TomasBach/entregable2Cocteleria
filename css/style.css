@@ -33,6 +33,7 @@
     height: auto;
     width: 15vw;
     min-height: 100vh;
+    min-width: 15vw;
 }
 
 .lista-navbar-admin {
@@ -52,3 +53,14 @@
     width: 80vw;
 }
 
+@media(max-width:768px){
+    .navbar-admin{
+      width: 100vw;
+      text-align: center;
+      height: 20vh;
+    }
+    .tablaBotellasAdmin{
+        width: 100vw;
+    }
+  }
+  
