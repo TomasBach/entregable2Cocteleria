@@ -30,16 +30,28 @@ tBodyBotellasAdmin.innerHTML = botellas.map((botella) =>
                   <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="inputNamebotella" aria-describedby="emailHelp" value="${botella.name}" name="namebotella">
+                      <input type="text" class="form-control "  aria-describedby="emailHelp" value="${botella.name}" name="namebotella">
                     </div>
                     <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Imagen</label>
-                    <input type="text" class="form-control" id="inputImgbotella" aria-describedby="emailHelp" value="Por ej: ${botella.img}" name="imagbotella">
+                    <input type="text" class="form-control"  aria-describedby="emailHelp" value="Por ej: ${botella.img}" name="imagbotella">
                   </div>
-                    <h5 class="text-center">Ingrese los ingredientes del botella </h5>
-                    
-                    
-                    
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Precio</label>
+                    <input type="text" class="form-control"  aria-describedby="emailHelp" value="$${botella.price}" name="pricbotella">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Descripcion</label>
+                    <input type="text" class="form-control" aria-describedby="emailHelp" value=" ${botella.descrp}" name="descrpbotella">
+                  </div>
+                  <div class="mb-3">
+                  <select class="form-select" aria-label="Default select example">
+                  <option selected>Actualmente: ${botella.licor}</option>
+                  <option id='${botella.id}-option1' value="Tequila">Tequila</option>
+                  <option id='${botella.id}-option2' value="Vino">Vino</option>
+                  <option id='${botella.id}-option3' value="Whisky">Whisky</option>
+                </select>
+                </div>
                     <button type="button" class="btn btn-primary" onclick="editarbotella(${botella.id})">Guardar Cambios</button>
                 </form>
                 </div>
@@ -47,7 +59,7 @@ tBodyBotellasAdmin.innerHTML = botellas.map((botella) =>
                 </div>
             </div>
             </div>
-            <button class="btn btn-success" onclick="botellaDestacado(${botella.id})">Destacar</button>
+            <button class="btn btn-success" onclick="botellaDestacada(${botella.id})">Destacar</button>
         </td>
     </tr>
     </div>
@@ -98,33 +110,33 @@ tBodyBotellasAdmin.innerHTML = botellas.map((botella) =>
 //   }
 // }
 
-// const borrarTrago = (idTrago) => {
-//   const confirmDelete = confirm('Confirmas que quieres eliminar este trago?')
+const borrarBotella = (idBotella) => {
+  const confirmDelete = confirm('Confirmas que quieres eliminar esta botella?')
 
-//   if (confirmDelete) {
-//     const filterProd = tragos.filter((trago) => trago.id !== Number(idTrago))
-//     localStorage.setItem('tragos', JSON.stringify(filterProd))
-//     location.reload()
-//   }
-// }
+  if (confirmDelete) {
+    const filterBot = botellas.filter((botella) => botella.id !== Number(idBotella))
+    localStorage.setItem('botella', JSON.stringify(filterBot))
+    location.reload()
+  }
+}
 
-// const tragoDestacado = (idTrago) => {
-//   let tragoDest = JSON.parse(localStorage.getItem('tragoDest')) || []
-//   if (tragoDest.length > 0) {
-//     if (idTrago !== tragoDest[0].id) {
-//       const confirmCambioDest = confirm('Estas seguro de que quieres reemplazar el trago destacado?')
-//       if (confirmCambioDest) {
-//         const tragFilter = tragos.filter((trago) => trago.id === idTrago)
-//         localStorage.setItem('tragoDest', JSON.stringify(tragFilter))
-//       }
-//     } else { alert('este trago esta destacado') }
-//   } else {
-//     const tragFilter = tragos.filter((trago) => trago.id === idTrago)
-//     tragoDest = tragFilter
-//     tragoDest.push(tragoDest[0])
-//     localStorage.setItem('tragoDest', JSON.stringify(tragoDest))
-//   }
-// }
+const botellaDestacada = (idBotella) => {
+  let botellaDest = JSON.parse(localStorage.getItem('botellaDest')) || []
+  if (botellaDest.length > 0) {
+    if (idBotella !== botellaDest[0].id) {
+      const confirmCambioDest = confirm('Estas seguro de que quieres reemplazar la botella destacada?')
+      if (confirmCambioDest) {
+        const botFilter = botellas.filter((botella) => botella.id === idBotella)
+        botellaDest = botFilter
+        localStorage.setItem('botellaDest', JSON.stringify(botFilter))
+      }
+    } else { alert('esta botella esta destacada') }
+  } else {
+    const botFilter = botellas.filter((botella) => botella.id === idBotella)
+    botellaDest.push(botFilter[0])
+    localStorage.setItem('botellaDest', JSON.stringify(botellaDest))
+  }
+}
 
 // inputNameTrago.addEventListener('input', changeValues)
 // inputImgTrago.addEventListener('input', changeValues)
