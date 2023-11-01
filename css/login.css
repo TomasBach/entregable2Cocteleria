@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+
+.input-mail {
+    border: 0;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.input-mail::placeholder {
+    color: white;
+}
+
+.input-mail:focus {
+    background-color: black;
+    color: white;
+}
+
+.input-contraseña {
+    border: 0;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.input-contraseña::placeholder {
+    color: white;
+}
+
+.input-contraseña:focus {
+    background-color: black;
+    color: white;
+}
+
+.gradient-form {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/imagenes/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg);
+    max-width: 100%;
+
+
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    min-height: 100vh;
+}
+
+.formulario-login {
+    background-color: rgb(17, 17, 17);
+}
+
+.titulo-login {
+    font-family: Lato;
+}
+
+.formulario-login {
+    font-family: Lato;
+
+}
+
+.gradient-custom-2 {
+    font-family: Lato;
+    background: linear-gradient(to right, rgb(92, 33, 33), #5C2121);
+}
+
+.button-login {
+    font-family: Lato;
+
+}
+
+.div-botonregistro {
+    font-family: Lato;
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh;
+    }
+}
