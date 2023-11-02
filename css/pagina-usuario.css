@@ -329,6 +329,10 @@ padding: 0;
 
   
   }
+  .centrar-caja{
+    display: flex;
+    justify-content: center;
+  }
   .dropdown-usuario{
     width: 100%;
     list-style: none;
