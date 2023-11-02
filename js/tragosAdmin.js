@@ -1,6 +1,16 @@
 const tBody = document.getElementById('tBodyTragosAdmin');
 const tragos = JSON.parse(localStorage.getItem('tragos')) || []
 
+const buttonCreate = document.getElementById('idButtonCreate')
+
+const inputNameNTrago = document.getElementById('inputNameNTrago')
+const inputImgNTrago = document.getElementById('inputImgNTrago')
+const inputIngred1NTrago = document.getElementById('inputIngred1NTrago')
+const inputIngred2NTrago = document.getElementById('inputIngred2NTrago')
+const inputIngred3NTrago = document.getElementById('inputIngred3NTrago')
+const inputIngred4NTrago = document.getElementById('inputIngred4NTrago')
+const inputIngred5NTrago = document.getElementById('inputIngred5NTrago')
+
 tBodyTragosAdmin.innerHTML = tragos.map((trago) =>
   `
     <div class="my-auto">
@@ -19,9 +29,9 @@ tBodyTragosAdmin.innerHTML = tragos.map((trago) =>
         </td>
 
         <td>
-        <button class="btn btn-danger" onclick="borrarTrago(${trago.id})">Eliminar</button>
+        <button class="btn btn-outline-danger" onclick="borrarTrago(${trago.id})">Eliminar</button>
 
-            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-${trago.id}">
+            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal-${trago.id}">
               Editar
             </button>
             
@@ -72,7 +82,7 @@ tBodyTragosAdmin.innerHTML = tragos.map((trago) =>
                 </div>
             </div>
             </div>
-            <button class="btn btn-success" onclick="tragoDestacado(${trago.id})">Destacar</button>
+            <button class="btn btn-outline-success" onclick="tragoDestacado(${trago.id})">Destacar</button>
         </td>
     </tr>
     </div>
@@ -97,9 +107,22 @@ const dataForm = {
   ingrediente5: ''
 
 }
+const formCreate = {
+  nameNTrago: '',
+  imgNTrago: '',
+  ingred1NTrago: '',
+  ingred2NTrago: '',
+  ingred3NTrago: '',
+  ingred4NTrago: '',
+  ingred5NTrago: '',
+}
 const changeValues = (ev) => {
   const { name, value } = ev.target
   dataForm[name] = value
+}
+const createBotForm = (ev) => {
+  const { name, value } = ev.target
+  formCreate[name] = value
 }
 
 const editarTrago = (idTrago) => {
@@ -122,6 +145,32 @@ const editarTrago = (idTrago) => {
   }
 }
 
+const sendFormCreate = (ev) => {
+  const { nameNTrago, imgNTrago, ingred1NTrago, ingred2NTrago, ingred3NTrago, ingred4NTrago, ingred5NTrago} = formCreate
+
+  if (!nameNTrago && !imgNTrago && !ingred1NTrago && !ingred2NTrago && !ingred3NTrago && !ingred4NTrago && !ingred5NTrago) {
+    alert('el formulario esta vacio')
+  } else {
+
+    const newId = tragos[tragos.length - 1].id + 1
+
+    const tragosN = {
+      id: newId,
+      name: nameNTrago,
+      img: imgNTrago,
+      ingred:{
+        ingred1: ingred1NTrago,
+        ingred2: ingred2NTrago,
+        ingred3: ingred3NTrago,
+        ingred4: ingred4NTrago,
+        ingred5: ingred5NTrago,
+      }
+    }
+    tragos.push(tragosN)
+    localStorage.setItem('tragos', JSON.stringify(tragos))
+    location.reload()
+  }
+}
 const borrarTrago = (idTrago) => {
   const confirmDelete = confirm('Confirmas que quieres eliminar este trago?')
 
@@ -131,7 +180,6 @@ const borrarTrago = (idTrago) => {
     location.reload()
   }
 }
-
 const tragoDestacado = (idTrago) => {
   let tragoDest = JSON.parse(localStorage.getItem('tragoDest')) || []
   if (tragoDest.length > 0) {
@@ -173,3 +221,12 @@ inputIngrediente5.forEach(element => {
 });
 
 
+inputNameNTrago.addEventListener('input', createBotForm)
+inputImgNTrago.addEventListener('input', createBotForm)
+inputIngred1NTrago.addEventListener('input', createBotForm)
+inputIngred2NTrago.addEventListener('input', createBotForm)
+inputIngred3NTrago.addEventListener('input', createBotForm)
+inputIngred4NTrago.addEventListener('input', createBotForm)
+inputIngred5NTrago.addEventListener('input', createBotForm)
+
+buttonCreate.addEventListener('click', sendFormCreate)

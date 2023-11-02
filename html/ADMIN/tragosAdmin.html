@@ -15,31 +15,104 @@
 </head>
 
 <body>
-
-  <main>
-    <div class="container-fluid">
-      <div class="row ">
-        <div class="col-sm-12 col-md-3 navbar-admin">
-          <ul class="text-light lista-navbar-admin p-3 ">
-            <li class="my-3"><a href="/html/ADMIN/inicioAdmin.html">Inicio</a></li>
-            <li class="my-3"><a href="/html/ADMIN/tragosAdmin.html">Tragos</a></li>
-            <li class="my-3"><a href="/html/ADMIN/usuariosAdmin.html">Usuarios</a></li>
-            <li class="my-3"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+<header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar bg-dark border-bottom border-body" data-bs-theme="dark"">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/html/ADMIN/inicioAdmin.html">ADMIN</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active fs-5" aria-current="page" href="/html/ADMIN/tragosAdmin.html">Tragos</a>
+            </li>
+            <li class="">
+              <a class="nav-link active fs-5" href="/html/ADMIN/usuariosAdmin.html">Usuarios</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Tienda
               </a>
-              <ul class="dropdown-menu fs-5">
-                <li><a class="dropdown-item text-dark" href="/html/ADMIN/botellasAdmin.html">Botellas</a></li>
-                <li><a class="dropdown-item text-dark" href="#404">Servicio para eventos</a></li>
-                <li><a class="dropdown-item text-dark" href="#404">Cursos</a></li>
+              <ul class="dropdown-menu fs-6">
+                <li><a class="dropdown-item " href="/html/ADMIN/botellasAdmin.html">Botellas</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Eventos</a></li>
+                
+                <li><a class="dropdown-item" href="#">Cursos</a></li>
               </ul>
             </li>
           </ul>
+            <ul>
+            <li class="nav-item mt-3">
+            <div class="">
+              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               + Nuevo Trago
+              </button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Nueva trago</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label text-light">Nombre</label>
+                          <input type="text" class="form-control" id="inputNameNTrago" name="nameNTrago">
+                        </div>
+                       
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label text-light">Imagen</label>
+                          <input type="text" class="form-control" id="inputImgNTrago" placeholder="URL ej: https://imagen.jpg" name="imgNTrago">
+                        </div>
+                        <h5 class="text-center text-light">Ingrese los ingredientes del trago</h5>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label text-light">Ingrediente 1</label>
+                          <input type="text" class="form-control" id="inputIngred1NTrago" name="ingred1NTrago">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label text-light">Ingrediente 2</label>
+                          <input type="text" class="form-control" id="inputIngred2NTrago" name="ingred2NTrago">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label text-light">Ingrediente 3</label>
+                          <input type="text" class="form-control" id="inputIngred3NTrago" name="ingred3NTrago">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label text-light">Ingrediente 4</label>
+                          <input type="text" class="form-control" id="inputIngred4NTrago" name="ingred4NTrago">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label text-light">Ingrediente 5</label>
+                          <input type="text" class="form-control" id="inputIngred5NTrago" name="ingred5NTrago">
+                        </div>
         
-
+                        
+                                      
+                        <button type="submit" class="btn btn-success w-100" id="idButtonCreate">Agregar trago</button>
+                      </form>
+                    
+                   
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </li>
+          </ul>
+          
+        </div>
       </div>
+    </nav>
+  </header>
+</header>
+  <main>
+    <div class="container-fluid">
+      <div class="row ">
     
-    <div class="col-sm-12 col-md-9 ms-3 tablaBotellasAdmin">
+    <div >
       <table class="table">
         <thead>
           <tr class="fs-5">
