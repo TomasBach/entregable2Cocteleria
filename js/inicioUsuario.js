@@ -1,9 +1,13 @@
 
-let destacado=document.getElementById("contenido-destacado")
-let destacadoBotella=JSON.parse(localStorage.getItem("botellaDest"))
-let destacadoTragos=JSON.parse(localStorage.getItem("tragoDest"))
+let destacado = document.getElementById("contenido-destacado")
+let destacadoBotella = JSON.parse(localStorage.getItem("botellaDest"))
+let destacadoTragos = JSON.parse(localStorage.getItem("tragoDest"))
+let categoriaVino = document.getElementById("categoria-vino")
+let categoriaLicor = document.getElementById("categoria-licor")
+let categoriaWhisky = document.getElementById("categoria-whisky")
+let categoriaTragos = document.getElementById("categoria-tragos")
 console.log(destacadoBotella[0])
-destacado.innerHTML=`<div class="col-md-6 col-sm-12 responsive-cel centrar-caja">
+destacado.innerHTML = `<div class="col-md-6 col-sm-12 responsive-cel centrar-caja">
 <div class="card d-flex centrado color-cambio text-light text-center mt-3 " style="width: 18rem;">
   <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
   <div class="card-body">
@@ -23,6 +27,30 @@ destacado.innerHTML=`<div class="col-md-6 col-sm-12 responsive-cel centrar-caja"
   </div>
 </div>
 </div>
-
-
 `
+const paginavino = (event) => {
+    event.preventDefault()
+    location.href=`/html/USUARIO/productosUsuario.html?licor=Vino`
+}
+
+
+const paginatequila = (event) => {
+    event.preventDefault()
+    alert("hola")
+    location.href=`/html/USUARIO/productosUsuario.html?licor=Tequila`
+}
+
+const paginawhisky = (event) => {
+    event.preventDefault()
+    location.href=`/html/USUARIO/productosUsuario.html?licor=Whisky`
+}
+
+const paginatragos = (event) => {
+    event.preventDefault()
+    location.href=`/html/USUARIO/productosUsuario.html?Tipo=Tragos`
+}
+
+categoriaVino.addEventListener("click", paginavino)
+categoriaLicor.addEventListener("click", paginatequila)
+categoriaWhisky.addEventListener("click", paginawhisky)
+categoriaTragos.addEventListener("click", paginatragos)
