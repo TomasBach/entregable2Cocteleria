@@ -6,7 +6,7 @@ switch (categoria) {
     case "Tragos":
         contenedor.innerHTML=tragos.map((elemento)=>
         `
-        <div class="col-lg-4 col-md-6 col-sm-12 mt-3 ">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
                           <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
                             <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
                             <div class="card-body">
@@ -22,7 +22,7 @@ switch (categoria) {
         const vino=botellas.filter((elemento)=>elemento.licor==categoria)
         
     contenedor.innerHTML=  vino.map((elemento)=>
-    `<div class="col-lg-4 col-md-6 col-sm-12 mt-3 ">
+    `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
     <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
       <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
       <div class="card-body">
@@ -38,7 +38,7 @@ switch (categoria) {
         const whisky=botellas.filter((elemento)=>elemento.licor==categoria)
         
     contenedor.innerHTML=  whisky.map((elemento)=>
-    `<div class="col-lg-4 col-md-6 col-sm-12 mt-3 ">
+    `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
     <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
       <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
       <div class="card-body">
@@ -55,7 +55,7 @@ switch (categoria) {
         const tequila=botellas.filter((elemento)=>elemento.licor==categoria)
         
         contenedor.innerHTML=  tequila.map((elemento)=>
-        `<div class="col-lg-4 col-md-6 col-sm-12 mt-3 ">
+        `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
         <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
           <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
           <div class="card-body">
@@ -66,9 +66,10 @@ switch (categoria) {
         </div>
       </div>
     `).join('')
+    break;
     default:
         contenedor.innerHTML += tragos.map((elemento) => `
-        <div class="col-lg-4 col-md-6 col-sm-12 mt-3 ">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
           <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
             <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
             <div class="card-body">
@@ -80,7 +81,7 @@ switch (categoria) {
         </div>
       `).join('');
       contenedor.innerHTML += botellas.map((elemento) => `
-        <div class="col-lg-4 col-md-6 col-sm-12 mt-3 ">
+        <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
           <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
             <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
             <div class="card-body">
@@ -93,4 +94,3 @@ switch (categoria) {
       `).join('');
         break;
   }
-  
