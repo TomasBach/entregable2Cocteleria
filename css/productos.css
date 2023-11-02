@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(20, 20, 20);
+    font-family: 'Lato', sans-serif;
+    line-height: 24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+    color: #000;
+    letter-spacing: 0.05em;
+}
+.centrado{
+    justify-content: center;
+    align-items: center;
+}
+
+.color-cambio{
+    background-color: rgb(20, 20, 20);
+ border: 4px solid rgb(141, 97, 15);
+    padding: 15px;
+
+}
+.boton3{
+    text-decoration: none;
+    color: #fdfdfd;
+    display: inline-block;
+   margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(141, 97, 15);
+}
+.titulo-footer{
+    
+    color: rgb(166, 155, 94);
+    width: 20%;
+    border-bottom: 1px solid gold;
+    padding-bottom: 15px;
+
+}
+.cambios li::before{
+    content: "-";
+}
+.cambios{
+list-style: none;
+padding: 0;
+
+}
+.cambios li{
+    margin-top: 16px;
+}
+footer{
+padding: 70px 70px 10px 70px;
+}
+
+.caja-tarjeta{
+border-top: 1px solid gold;
+border-bottom: 1px solid gold;
+padding: 25px;
+width: 100%;
+
+
+}
+.input-producto{
+    padding: 10px;
+    width: 22.5%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid gold;
+    color: #fdfdfd;
+}
+.margin-class{
+width: 100%;
+}
