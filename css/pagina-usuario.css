@@ -106,7 +106,9 @@ cursor: pointer;
     z-index: 100;
     background-color: transparent;
 }
-
+.texto{
+    color: #d9932f;
+}
 .cambio-color a {
     color: white;
 }
@@ -144,6 +146,12 @@ h1,h2,h3,h4,h5,h6{
 }
 .text-yellow{
     color: gold;
+}
+.texto-categoria{
+    margin-top: 25px;
+    color: #d9932f;
+    font-weight: 900;
+    font-size: 32px;
 }
 .boton{
 border: 1px solid white;
