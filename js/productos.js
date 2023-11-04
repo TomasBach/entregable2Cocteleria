@@ -7,7 +7,6 @@ const productos = botellas.concat(tragos)
 
 
 
-
 switch (categoria) {
     case "Tragos":
         contenedor.innerHTML = tragos.map((elemento) =>
@@ -18,7 +17,7 @@ switch (categoria) {
                             <div class="card-body">
                               <h5 class="card-title">${elemento.name}</h5>
                               <p class="card-text ">Ingredientes: <br>${elemento.ingred.ingred1}<br>${elemento.ingred.ingred2}<br> ${elemento.ingred.ingred3}</p>
-                              <a href="#" class="boton3">Ver Producto</a>
+                              <a href="#" class="boton3" onclick="cambioTrago(${elemento.id})">Ver Producto</a>
                             </div>
                           </div>
                         </div>
@@ -34,7 +33,7 @@ switch (categoria) {
               <div class="card-body">
                 <h5 class="card-title">${trago.name}</h5>
                 <p class="card-text ">Ingredientes: <br>${trago.ingred.ingred1}<br>${trago.ingred.ingred2}<br> ${trago.ingred.ingred3}</p>
-                <a href="#" class="boton3">Ver Producto</a>
+                <a href="#" class="boton3" onclick="cambioTrago(${trago.id})">Ver Producto</a>
               </div>
             </div>
           </div>
@@ -53,7 +52,7 @@ switch (categoria) {
       <div class="card-body">
         <h5 class="card-title">${elemento.name}</h5>
         <p class="card-text ">${elemento.price}</p>
-        <a href="#" class="boton3">Ver Producto</a>
+        <a href="#" class="boton3" onclick="cambioBotella(${elemento.id})">Ver Producto</a>
       </div>
     </div>
   </div>
@@ -67,7 +66,7 @@ switch (categoria) {
               <div class="card-body">
                 <h5 class="card-title">${botella.name}</h5>
                 <p class="card-text ">${botella.price}</p>
-                <a href="#" class="boton3">Ver Producto</a>
+                <a href="#" class="boton3" onclick="cambioBotella(${botella.id})">Ver Producto</a>
               </div>
             </div>
           </div>
@@ -87,7 +86,7 @@ switch (categoria) {
       <div class="card-body">
         <h5 class="card-title">${elemento.name}</h5>
         <p class="card-text ">${elemento.price}</p>
-        <a href="#" class="boton3">Ver Producto</a>
+        <a href="#" class="boton3" onclick="cambioBotella(${elemento.id})">Ver Producto</a>
       </div>
     </div>
   </div>
@@ -103,7 +102,7 @@ switch (categoria) {
               <div class="card-body">
                 <h5 class="card-title">${botella.name}</h5>
                 <p class="card-text ">${botella.price}</p>
-                <a href="#" class="boton3">Ver Producto</a>
+                <a href="#" class="boton3" onclick="cambioBotella(${botella.id})">Ver Producto</a>
               </div>
             </div>
           </div>
@@ -124,7 +123,7 @@ switch (categoria) {
           <div class="card-body">
             <h5 class="card-title">${elemento.name}</h5>
             <p class="card-text ">${elemento.price}</p>
-            <a href="#" class="boton3">Ver Producto</a>
+            <a href="#" class="boton3" onclick="cambioBotella(${elemento.id})">Ver Producto</a>
           </div>
         </div>
       </div>
@@ -138,7 +137,7 @@ switch (categoria) {
               <div class="card-body">
                 <h5 class="card-title">${botella.name}</h5>
                 <p class="card-text ">${botella.price}</p>
-                <a href="#" class="boton3">Ver Producto</a>
+                <a href="#" class="boton3" onclick="cambioBotella(${botella.id})">Ver Producto</a>
               </div>
             </div>
           </div>
@@ -156,7 +155,7 @@ switch (categoria) {
             <div class="card-body">
               <h5 class="card-title">${elemento.name}</h5>
               <p class="card-text ">Ingredientes: <br>${elemento.ingred.ingred1}<br>${elemento.ingred.ingred2}<br> ${elemento.ingred.ingred3}</p>
-              <a href="#" class="boton3">Ver Producto</a>
+              <a href="#" class="boton3" onclick="cambioTrago(${elemento.id})">Ver Producto</a>
             </div>
           </div>
         </div>
@@ -169,7 +168,7 @@ switch (categoria) {
             <div class="card-body">
               <h5 class="card-title">${elemento.name}</h5>
               <p class="card-text ">${elemento.price}</p>
-              <a href="#" class="boton3">Ver Producto</a>
+              <a href="#" class="boton3" onclick="cambioBotella(${elemento.id})">Ver Producto</a>
             </div>
           </div>
         </div>
@@ -184,7 +183,7 @@ switch (categoria) {
               <div class="card-body">
                 <h5 class="card-title">${botella.name}</h5>
                 <p class="card-text ">${botella.price ? botella.price : `Ingredientes: <br>${botella.ingred.ingred1}<br>${botella.ingred.ingred2}<br> ${botella.ingred.ingred3}`}</p>
-                <a href="#" class="boton3">Ver Producto</a>
+                <a href="#" class="boton3" onclick="${botella.price ? `cambioBotella(${botella.id})` : `cambioTrago(${botella.id})`}">Ver Producto</a>
               </div>
             </div>
           </div>
@@ -199,3 +198,11 @@ switch (categoria) {
 }
 
 
+
+const cambioBotella =(id)=>{
+ location.href=`/html/USUARIO/productoUsuario.html?botella=${id}`
+}
+
+const cambioTrago =(id)=>{
+  location.href=`/html/USUARIO/productoUsuario.html?trago=${id}`
+ }
