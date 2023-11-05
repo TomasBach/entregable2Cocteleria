@@ -11,13 +11,19 @@ const inputIngred3NTrago = document.getElementById('inputIngred3NTrago')
 const inputIngred4NTrago = document.getElementById('inputIngred4NTrago')
 const inputIngred5NTrago = document.getElementById('inputIngred5NTrago')
 
+const navbarAdminCantTrago = document.getElementById('navbarAdminCantTrago')
+
+navbarAdminCantTrago.innerHTML = 
+  `<p class="text-light">Actualmente hay: ${tragos.length} Trago/s</p>`
+
+
 tBodyTragosAdmin.innerHTML = tragos.map((trago) =>
   `
     <div class="my-auto">
     <tr >
         <th scope="row" class="fs-5">${trago.id}</th>
         <td product-id="${trago.id}" class="fs-5"><b>${trago.name}</b></td>
-        <td product-id="${trago.id}"><img src="${trago.img}" style="width:10vw;;" alt="Imagen ilustrativa del trago"></td>
+        <td product-id="${trago.id}"><img src="${trago.img}" class="img-tabla-admin" alt="Imagen ilustrativa del trago"></td>
         <td product-id="${trago.id}">
          <ul class="lista-ingredientes mt-3 fs-5">
             <li>${trago.ingred.ingred1} </li>

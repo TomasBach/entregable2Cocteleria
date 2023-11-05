@@ -35,7 +35,12 @@
     min-height: 100vh;
     min-width: 15vw;
 }
-
+.cardsInicioAdmin{
+    max-width: 640px;
+}
+.cardsInicioAdmin img{
+    height: 40vh;
+}
 .lista-navbar-admin {
     list-style: none;
     font-size: 200%;
@@ -52,7 +57,17 @@
 .tablaBotellasAdmin{
     width: 80vw;
 }
-
+.descrp-bot-admin{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.img-tabla-admin{
+    min-width:10vw; 
+    width: 10vw; 
+    min-height:20vh;
+    height: 25vh;
+}
 @media(max-width:768px){
     .navbar-admin{
       width: 100vw;
@@ -61,6 +76,13 @@
     }
     .tablaBotellasAdmin{
         width: 100vw;
+    }
+    .cardsInicioAdmin{
+        min-width: none;
+    }
+    .img-tabla-admin{
+        min-width:25vw;
+        min-height:25vh;
     }
   }
   

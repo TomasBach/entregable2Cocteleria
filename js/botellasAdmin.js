@@ -8,13 +8,19 @@ const inputPriceNBotella = document.getElementById('inputPriceNBotella')
 const inputDescrpNBotella = document.getElementById('inputDescrpNBotella')
 const inputLicorNBotella = document.getElementById('inputLicorNBotella')
 
+const navbarAdminCantBot = document.getElementById('navbarAdminCantBot')
+
+navbarAdminCantBot.innerHTML = 
+  `<p class="text-light">Actualmente hay: ${botellas.length} botella/s</p>`
+
+
 tBodyBotellasAdmin.innerHTML = botellas.map((botella) =>
   `
     <div class="my-auto">
     <tr >
         <th scope="row" class="fs-5">${botella.id}</th>
         <td product-id="${botella.id}" class="fs-5"><b>${botella.name}</b></td>
-        <td product-id="${botella.id}"><img src="${botella.img}" style=" min-width:10vw; height:25vh; " alt="Imagen ilustrativa de la botella"></td>
+        <td product-id="${botella.id}"><img src="${botella.img}" class="img-tabla-admin" alt="Imagen ilustrativa de la botella"></td>
         <td product-id="${botella.id}" class="fs-5">${botella.licor}</td>
         <td product-id="${botella.id}" class="fs-5">${botella.price}</td>
         <td product-id="${botella.id}" class="fs-5">${botella.descrp}</td>
@@ -53,6 +59,8 @@ tBodyBotellasAdmin.innerHTML = botellas.map((botella) =>
                     
                   </div>
                   <div class="mb-3">
+                  
+                  <label for="" class="form-label">Licor</label>
                   <select class="form-select inputLicorBotella" name="licorBotella" aria-label="Default select example">
                   <option disable>Licor actual: ${botella.licor}</option>
                   <option value="Tequila">Tequila</option>
@@ -105,11 +113,12 @@ const createBotForm = (ev) => {
 }
 
 const editarBotella = (idBotella) => {
-
+  const botellaDest = JSON.parse(localStorage.getItem('botellaDest'))
   const { nameBotella, imagBotella, priceBotella, descrpBotella, licorBotella } = dataForm
 
   const filterBotella = botellas.filter((botella) => botella.id === Number(idBotella))
   const positionBotella = botellas.findIndex((botella) => botella.id === Number(idBotella))
+
   if (filterBotella.length > 0) {
     filterBotella[0].name = nameBotella ? nameBotella :  filterBotella[0].name
     filterBotella[0].img = imagBotella ? imagBotella :  filterBotella[0].img
@@ -117,9 +126,9 @@ const editarBotella = (idBotella) => {
     filterBotella[0].price = priceBotella ? priceBotella : filterBotella[0].price
     filterBotella[0].licor = licorBotella ? licorBotella : filterBotella[0].licor
 
-    botellas[positionBotella] = filterBotella[0]
-    localStorage.setItem('botellas', JSON.stringify(botellas))
-    location.reload()
+      botellas[positionBotella] = filterBotella[0]
+      localStorage.setItem('botellas', JSON.stringify(botellas))
+      location.reload()
   }
  }
 
@@ -158,18 +167,25 @@ const borrarBotella = (idBotella) => {
 const botellaDestacada = (idBotella) => {
   let botellaDest = JSON.parse(localStorage.getItem('botellaDest')) || []
   if (botellaDest.length > 0) {
+
     if (idBotella !== botellaDest[0].id) {
+
       const confirmCambioDest = confirm('Estas seguro de que quieres reemplazar la botella destacada?')
       if (confirmCambioDest) {
+
         const botFilter = botellas.filter((botella) => botella.id === idBotella)
         botellaDest = botFilter
         localStorage.setItem('botellaDest', JSON.stringify(botFilter))
       }
+
     } else { alert('esta botella esta destacada') }
+
   } else {
+
     const botFilter = botellas.filter((botella) => botella.id === idBotella)
     botellaDest.push(botFilter[0])
     localStorage.setItem('botellaDest', JSON.stringify(botellaDest))
+
   }
 }
 
