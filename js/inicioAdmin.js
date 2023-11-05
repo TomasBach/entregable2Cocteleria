@@ -17,7 +17,7 @@ cardsInicioAdminBotella.innerHTML = botellas.map((botella) => `
         </div>
     </div>
     <div class="card-footer">
-    <a href="/html/ADMIN/botellasAdmin.html" class="text-decoration-none"><button type="button" class="btn btn-info w-0  text-light">Ir a BOTELLAS</button></a>
+    <a href="/html/ADMIN/botellasAdmin.html" class="text-decoration-none"><button type="button" class="btn btn-info w-50  text-light">Ir a BOTELLAS</button></a>
 </div>
   </div>
 </div>

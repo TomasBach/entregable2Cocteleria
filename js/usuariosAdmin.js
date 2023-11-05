@@ -2,9 +2,9 @@ const tBody = document.getElementById('tBodyUsuariosAdmin');
 const usuarios = JSON.parse(localStorage.getItem('usuarios')) || []
 const buttonCreate = document.getElementById('idButtonCreate')
 
-const inputNameNBotella = document.getElementById('inputMailNUsuario')
-const inputImgNBotella = document.getElementById('inputContNUsuario')
-const inputPriceNBotella = document.getElementById('inputRoleNUsuario')
+const inputMailNUsuario = document.getElementById('inputMailNUsuario')
+const inputContNUsuario = document.getElementById('inputContNUsuario')
+const inputRoleNUsuario = document.getElementById('inputRoleNUsuario')
 
 const navbarAdminCantBot = document.getElementById('navbarAdminCantBot')
 
@@ -15,7 +15,7 @@ navbarAdminCantUsuarios.innerHTML =
   tBodyUsuariosAdmin.innerHTML = usuarios.map((usuario) =>
   `
     <div class="my-auto">
-    <tr >
+    <tr>
         <th scope="row" class="fs-5">${usuario.id}</th>
         <td product-id="${usuario.id}" class="fs-5"><b>${usuario.mail}</b></td>
         <td product-id="${usuario.id}" class="fs-5">${usuario.role}</td>
