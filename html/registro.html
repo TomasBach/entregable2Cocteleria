@@ -1,56 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="palabras claves">
-    <meta name="author" content="nombre de los autores">
-    <meta name="description" content="breve descripcion de la pagina">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Pagina Principal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/entregable2Cocteleria/css/registro.css">
 </head>
+
 <body>
-<header>
-    <nav class="navbar bg-body-dark navbar-index">
-        <div class="container-fluid">
-          <a class="navbar-brand d-flex mx-auto" href="#">
-         <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 576 512"><style>svg{fill:#ffffff}</style><path d="M432 240c53 0 96-43 96-96s-43-96-96-96c-35.5 0-66.6 19.3-83.2 48H296.2C316 40.1 369.3 0 432 0c79.5 0 144 64.5 144 144s-64.5 144-144 144c-27.7 0-53.5-7.8-75.5-21.3l35.4-35.4c12.2 5.6 25.8 8.7 40.1 8.7zM1.8 142.8C5.5 133.8 14.3 128 24 128H392c9.7 0 18.5 5.8 22.2 14.8s1.7 19.3-5.2 26.2l-177 177V464h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H208 120c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V345.9L7 169c-6.9-6.9-8.9-17.2-5.2-26.2z"/></svg> 
-            <p class="text-light my-auto ms-2 ">LA COCTELERI</p>
-          </a>
+  <main>
+    <section class="gradient-form">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-10">
+            <div class="card rounded-3 text-black">
+              <div class="row g-0">
+                <div class="col-lg-6 formulario-registro">
+                  <div class="card-body p-md-5 mx-md-4 ">
+
+                    <div class="text-center">
+                      <img
+                        src="/entregable2Cocteleria/IMAGENES/Groovy-removebg-preview.png"
+                        style="width: 185px;" alt="logo">
+                      <h4 class="mt-1 mb-5 pb-1 titulo-registro text-white">Regístrate en Sedientas!</h4>
+                    </div>
+
+                    <form class="formulario-registro">
+                      <p class="text-white">Regístrate</p>
+
+                      <div class="form-outline mb-4">
+                        <input type="text" id="nombre" class="form-control input-nombre" placeholder="Nombre" />
+                        <label class="form-label text-white" for="nombre">Nombre</label>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input type="email" id="correo" class="form-control input-mail" placeholder="Correo Electrónico" />
+                        <label class="form-label text-white" for="correo">Correo Electrónico</label>
+                      </div>
+
+                      <div class="form-outline mb-4">
+                        <input type="password" id="contrasena" class="form-control input-contrasena" placeholder="Contraseña" />
+                        <label class="form-label text-white" for="contrasena">Contraseña</label>
+                      </div>
+
+                      <div class="text-center pt-1 mb-5 pb-1">
+                        <button class="btn btn-danger btn-block fa-lg button-registro mb-3 text-white"
+                          type="button">Registrarse</button>
+                      </div>
+
+                    </form>
+
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                  <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                    <img class="w-100" src="/entregable2Cocteleria/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg"
+                      alt="">
+                    <p class="fs-5 mb-0 p-4 text-center">"Sed de Uvas" es una acogedora tienda de vinos y licores en general, que se
+                      especializa en ofrecer una cuidadosa selección de vinos de calidad, con un enfoque en los vinos argentinos. El
+                      ambiente rústico y cálido crea un espacio ideal para los amantes del vino y bebidas que desean explorar y
+                      disfrutar de las mejores cepas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </nav>
-</header>
-<main >  
-  <form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Repeat Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary"><a href="/html/inicioSesion.html">registrarse</a></button>
-  </form>
-   
- </main>
-  
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+  </main>
 </body>
+
 </html>
