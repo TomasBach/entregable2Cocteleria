@@ -21,7 +21,7 @@
     border: 0;
     background: transparent;
     border: 1px solid white;
-    color: white;
+    color: white; 
 }
 
 .input-contraseña::placeholder {
@@ -80,4 +80,17 @@
     .gradient-form {
         height: 100vh;
     }
+}
+
+@media (min-width: 768px) and (max-width: 990px)
+{
+    .gradient-form {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/entregable2Cocteleria/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg);
+        max-width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 100%;
+        min-height: 100vh;
+    }  
 }
