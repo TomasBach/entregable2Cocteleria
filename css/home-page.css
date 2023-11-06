@@ -14,7 +14,7 @@ body{
 
     background-repeat: no-repeat;
     background-position: center center;
-
+    background-attachment: fixed;
     min-height: 100vh;
     
 }
@@ -153,3 +153,16 @@ right: 70px;
         
         }
 }
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+   
+    .box p{
+        font-size: 12px;
+    
+        padding: 0px 0px 0px 0px;
+    
+    }
+    .margin-text{
+        margin-top: 5px;
+    }
+  }
