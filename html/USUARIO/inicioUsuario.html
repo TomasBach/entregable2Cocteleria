@@ -4,46 +4,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Dependencies/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../../css/pagina-usuario.css">
-  <title>Document</title>
+  <title>Sedientas</title>
 </head>
 
 <body>
-  <header class="container">
-    <nav class="nav">
-      <div class="mt-4 nav-p"><a href="">Mi cuenta</a></div>
+  
+  <header class="container-fluid">
+   
+    <nav class="nav" id="nav-menu">
+
+      <div class="mt-4 nav-p"><a   href="productosusuario.html" id="boton-dropdown-mobile">Mi cuenta <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+      </svg></a>
+      <ul class="dropdown-usuario" id="dropdown-id">
+        <li>Nombre</li>
+        <li>configuracion</li>
+        <li class="text-danger cerrar-sesion">Cerrar sesion</li>
+      </ul>
+    </div>
       <div class="lista mt-3">
         <ul>
           <li class="text-black">
-            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="76" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
             </svg>
           </li>
           <li class="text-black">
-            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="22" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="76" height="30" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
             </svg>
           </li>
-          <li class="text-black"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="22" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <li class="text-black"><svg xmlns="http://www.w3.org/2000/svg" width="76" height="30" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
             <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
           </svg></li>
         </ul>
       </div>
       <div class="lista2">
         <ul>
-          <li class="text-black">
-            Inicio
+          <li class="">
+            <a href="inicioUsuario.html">Inicio</a>
           </li>
-          <li class="text-black">Sobre nosotros</li>
-          <li class="text-black">Pedidos</li>
-          <li class="text-black">lo que viene</li>
-          <li class="text-black">Preguntas</li>
+          <li class=""><a href="">Sobre nosotros</a></li>
+          <li class=""><a href="productosusuario.html">Productos</a></li>
+          <li class=""><a href=""><a href="">Contacto</a></a></li>
+          <li class=""><a href="">Preguntas</a></li>
+          
+          
         </ul>
       </div>
+      
+      <div class="text-center boton-cerrar mt-4">
+        <a id="Boton-cerrar" href=""><svg xmlns="http://www.w3.org/2000/svg" width="36" height="26" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg></a>
+      </div>
+      
     </nav>
+    <nav class="nav-tele">
+      <div class="imagen-logo">
+        <a href=""><img src="" alt=""></a>
+        <img src="../../IMAGENES/Groovy-removebg-preview.png" width="72px" alt="">
+      </div>
+      <div class="lista-nav"><ul>
+        <li class="carta" ><a href="">Inicio</a></li>
+        <li><a href="">Sobre nosotros</a></li>
+        <li><a href="productosusuario.html">Productos</a></li>
+        <li><a href="">Contacto</a></li>
+      </ul></div>
+      <div class="lista-final nueva">
+        <ul>
+          <div class="boton-abrir show-boton"><a href="" id="boton-Abrir"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+          </svg></a></div>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="36" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg></li>
+          <li class="text-danger"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="22" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg></li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="36" height="22" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+          </svg></li>
+          <li><a class="text-light"  href="" id="boton-dropdown-mobile2">cuenta <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg></a>
+          
+          <ul class="dropdown-usuario2" id="dropdown-id2">
+            <li>Nombre</li>
+            <li>configuracion</li>
+            <li class="text-danger">Cerrar sesion</li>
+          </ul></li>
+          
+        </ul>
+        
+      </div>
+     
+    </nav>
+   
   </header>
 
   <main>
@@ -88,16 +149,16 @@
         <div class="col-md-4  img-content sacar-padding "><img src="../../IMAGENES/p3.jpg" class="w-100 img-fluid" alt=""></div>
       </div>
     </section>
-    <h2 class="text-light text-center">Categorias</h2>
+    <h2 class="texto-categoria text-center">Categorias</h2>
     <section class="container mt-2">
 
 
       <div class="row ">
-        <div class="col-md-3 col-sm-6  centrado-img mt-4"><a href=""><img src="../../IMAGENES/c1.png" class="" alt=""></a></div>
-        <div class="col-md-3 col-sm-6  centrado-img mt-4"><a href=""><img src="../../IMAGENES/c2.png" class="" alt=""></a></div>
-        <div class="col-md-3 col-sm-6   centrado-img mt-4"><a href=""><img src="../../IMAGENES/c3.png" class="" alt=""></a>
-        </div>
-        <div class="col-md-3 col-sm-6  centrado-img mt-4"><a href=""><img src="../../IMAGENES/c4.png" class="" alt=""></a></div>
+        <div class="col-md-3 col-sm-6  centrado-img mt-4"><a href="" id="categoria-licor"><img src="../../IMAGENES/c1.png" class="" alt=""></a> <h2 class="texto">Tequila</h2></div>
+        <div class="col-md-3 col-sm-6  centrado-img mt-4"><a href="" id="categoria-whisky"><img src="../../IMAGENES/c2.png" class="" alt=""></a> <h2 class="texto">Whisky</h2></div>
+        <div class="col-md-3 col-sm-6  centrado-img mt-4"><a href="" id="categoria-vino"><img src="../../IMAGENES/c4.png" class="" alt=""></a> <h2 class="texto">Vino</h2></div>
+          <div class="col-md-3 col-sm-6  centrado-img mt-4"><a href="" id="categoria-tragos"><img src="../../IMAGENES/c4.png" class="" alt=""></a> <h2 class="texto">Tragos</h2></div>
+          
       </div>
 
 
@@ -108,8 +169,8 @@
       <div class="contenedor">
         <div class="wrap">
           <div class="box">
-            <span>HAND-PICKED</span>
-            <h1>SAVE MORE POUER MORE</h1>
+            <span>Descubre Exquisitas Notas y Bouquets en Cada Botella</span>
+            <h1>Explora el Arte del Vino</h1>
             <div class="botones">
               <a class="boton1" href="">Suscribite</a>
 
@@ -123,41 +184,11 @@
     </section>
 
     <section class="mt-3 container">
-      <h2 class="text-light ">Destacados</h2>
+      <h2 class="text-light text-center ">Destacados</h2>
       <div class="container ">
 
-        <div class="row  ">
-          <div class="col-md-4 col-sm-12 responsive-cel">
-            <div class="card d-flex centrado color-cambio text-light text-center mt-3 " style="width: 18rem;">
-              <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Vino Negro</h5>
-                <p class="card-text ">$1500</p>
-                <a href="#" class="boton3">Ver Producto</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12 responsive-cel">
-            <div class="card d-flex centrado color-cambio text-light text-center mt-3" style="width: 18rem;">
-              <img src="../../IMAGENES/pro-2.png" class="card-img-top w-50" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Vino Blanco</h5>
-                <p class="card-text">$1500</p>
-
-                <a href="#" class="boton3">Ver Producto</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12 responsive-cel">
-            <div class="card d-flex centrado color-cambio text-light text-center mt-3" style="width: 18rem;">
-              <img src="../../IMAGENES/pro-3.png" class="card-img-top w-50" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Vino Blanco</h5>
-                <p class="card-text">$1500</p>
-                <a href="#" class="boton3">Ver Producto</a>
-              </div>
-            </div>
-          </div>
+        <div class="row" id="contenido-destacado"> 
+       
         </div>
       </div>
     </section>
@@ -171,8 +202,8 @@
           </div>
 
         </div>
-        <div class="col-md-6 col-sm-12 col-sacar-padding background-color-cambio2">
-          <input class="input-email" placeholder="Enviar Mensaje" type="text">
+        <form class="col-md-6 col-sm-12 col-sacar-padding background-color-cambio2">
+          <input class="input-email" maxlength="150" minlength="5" placeholder="Enviar Mensaje" type="text">
 
           <a class="boton2" href="">Enviar</a>
 
@@ -273,10 +304,13 @@
     <p class="text-light text-center mt-3">&copy; 2023 Tu Empresa. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="appy.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+    <script src="../../js/usuariosAdmin.js"></script>
+    <script src="../../js/inicioUsuario.js"></script>
+    <script src="../../js/navbar.js"></script>
 </body>
 
 </html>
