@@ -13,7 +13,7 @@ switch (categoria) {
             `
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
                           <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-                            <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+                            <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">${elemento.name}</h5>
                               <p class="card-text ">Ingredientes: <br>${elemento.ingred.ingred1}<br>${elemento.ingred.ingred2}<br> ${elemento.ingred.ingred3}</p>
@@ -29,7 +29,7 @@ switch (categoria) {
             contenedor.innerHTML=filtroTragos.map((trago)=>`
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
             <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-              <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+              <img src="../..${trago.img}" class="card-img-top w-50" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${trago.name}</h5>
                 <p class="card-text ">Ingredientes: <br>${trago.ingred.ingred1}<br>${trago.ingred.ingred2}<br> ${trago.ingred.ingred3}</p>
@@ -48,7 +48,7 @@ switch (categoria) {
         contenedor.innerHTML = vino.map((elemento) =>
             `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
     <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-      <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+      <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
       <div class="card-body">
         <h5 class="card-title">${elemento.name}</h5>
         <p class="card-text ">${elemento.price}</p>
@@ -62,7 +62,7 @@ switch (categoria) {
             contenedor.innerHTML=filtroTragos.map((botella)=>`
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
             <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-              <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+              <img src="../..${botella.img}" class="card-img-top w-50" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${botella.name}</h5>
                 <p class="card-text ">${botella.price}</p>
@@ -82,7 +82,7 @@ switch (categoria) {
         contenedor.innerHTML = whisky.map((elemento) =>
             `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
     <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-      <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+      <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
       <div class="card-body">
         <h5 class="card-title">${elemento.name}</h5>
         <p class="card-text ">${elemento.price}</p>
@@ -98,7 +98,7 @@ switch (categoria) {
             contenedor.innerHTML=filtroTragos.map((botella)=>`
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
             <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-              <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+              <img src="../..${botella.img}" class="card-img-top w-50" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${botella.name}</h5>
                 <p class="card-text ">${botella.price}</p>
@@ -119,7 +119,7 @@ switch (categoria) {
         contenedor.innerHTML = tequila.map((elemento) =>
             `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
         <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-          <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+          <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
           <div class="card-body">
             <h5 class="card-title">${elemento.name}</h5>
             <p class="card-text ">${elemento.price}</p>
@@ -133,7 +133,7 @@ switch (categoria) {
             contenedor.innerHTML=filtroTragos.map((botella)=>`
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
             <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-              <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+              <img src="../..${botella.img}" class="card-img-top w-50" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${botella.name}</h5>
                 <p class="card-text ">${botella.price}</p>
@@ -151,7 +151,7 @@ switch (categoria) {
         contenedor.innerHTML += tragos.map((elemento) => `
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
           <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-            <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+            <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
             <div class="card-body">
               <h5 class="card-title">${elemento.name}</h5>
               <p class="card-text ">Ingredientes: <br>${elemento.ingred.ingred1}<br>${elemento.ingred.ingred2}<br> ${elemento.ingred.ingred3}</p>
@@ -164,7 +164,7 @@ switch (categoria) {
         contenedor.innerHTML += botellas.map((elemento) => `
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
           <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-            <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+            <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
             <div class="card-body">
               <h5 class="card-title">${elemento.name}</h5>
               <p class="card-text ">${elemento.price}</p>
@@ -179,7 +179,7 @@ switch (categoria) {
             `
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
             <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
-              <img src="../../IMAGENES/pro-1.png" class="card-img-top w-50" alt="...">
+              <img src="../..${botella.img}" class="card-img-top w-50" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${botella.name}</h5>
                 <p class="card-text ">${botella.price ? botella.price : `Ingredientes: <br>${botella.ingred.ingred1}<br>${botella.ingred.ingred2}<br> ${botella.ingred.ingred3}`}</p>
