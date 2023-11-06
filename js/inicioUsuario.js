@@ -41,7 +41,7 @@ categoriaTragos.addEventListener("click", paginatragos)
 
 destacado.innerHTML = `<div class="col-md-6 col-sm-12 responsive-cel centrar-caja">
 <div class="card d-flex centrado color-cambio text-light text-center mt-3 " style="width: 18rem;">
-  <img src="../..${destacado[0].img}" class="card-img-top w-50" alt="...">
+  <img src="../..${destacadoBotella[0].img}" class="card-img-top w-50" alt="...">
   <div class="card-body">
     <h5 class="card-title">${destacadoBotella[0].name}</h5>
     <p class="card-text ">$${destacadoBotella[0].price}</p>
@@ -51,7 +51,7 @@ destacado.innerHTML = `<div class="col-md-6 col-sm-12 responsive-cel centrar-caj
 </div>
 <div class="col-md-6 col-sm-12 responsive-cel centrar-caja">
 <div class="card d-flex centrado color-cambio text-light text-center mt-3" style="width: 18rem;">
-  <img src="../..${destacado[0].img}" class="card-img-top w-50" alt="...">
+  <img src="../..${destacadoTragos[0].img}" class="card-img-top w-50" alt="...">
   <div class="card-body">
     <h5 class="card-title">${destacadoTragos[0].name}</h5>
     <p class="card-text">Ingredientes: <br>${destacadoTragos[0].ingred.ingred1}<br>${destacadoTragos[0].ingred.ingred2}<br> ${destacadoTragos[0].ingred.ingred3}</p>
