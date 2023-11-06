@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+
+.input-mail {
+    border: 0;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.input-mail::placeholder {
+    color: white;
+}
+
+.input-mail:focus {
+    background-color: black;
+    color: white;
+}
+
+.input-contraseña {
+    border: 0;
+    background: transparent;
+    border: 1px solid white;
+    color: white; 
+}
+
+.input-contraseña::placeholder {
+    color: white;
+}
+
+.input-contraseña:focus {
+    background-color: black;
+    color: white;
+}
+
+.gradient-form {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg);
+    max-width: 100%;
+
+
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    min-height: 100vh;
+}
+
+.formulario-login {
+    background-color: rgb(17, 17, 17);
+}
+
+.titulo-login {
+    font-family: 'Kanit', sans-serif;
+}
+
+.formulario-login {
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.gradient-custom-2 {
+    font-family: 'DM Serif Display', serif;
+
+    background: linear-gradient(to right, rgb(92, 33, 33), #5C2121);
+}
+
+.gradient-custom-2 p{
+    color: rgb(174, 154, 42);
+}
+
+.button-login {
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.div-botonregistro {
+    font-family: 'Kanit', sans-serif;
+}
+
+@media (min-width: 768px) {
+    .gradient-form {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px)
+{
+    .gradient-form {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg);
+        max-width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 100%;
+        min-height: 100vh;
+    }
+}
+
+.pruebaja{
+margin: 0   ;
+}
