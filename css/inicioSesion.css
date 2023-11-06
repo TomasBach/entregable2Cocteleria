@@ -59,7 +59,7 @@
 
 .gradient-custom-2 {
     font-family: 'DM Serif Display', serif;
-    
+
     background: linear-gradient(to right, rgb(92, 33, 33), #5C2121);
 }
 
@@ -92,5 +92,5 @@
         background-position: top center;
         height: 100%;
         min-height: 100vh;
-    }  
+    }
 }
