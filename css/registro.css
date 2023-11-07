@@ -16,6 +16,9 @@ html, body {
     background-attachment: fixed;
   }
   
+.cambio-display{
+    display: none;
+}
 
 .input-usuario,
 .input-mail,

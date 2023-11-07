@@ -33,26 +33,31 @@
 
                       <div class="form-outline mb-4">
                         <input type="text" id="idUsuario" name="usuario" class="form-control input-usuario" placeholder="usuario" />
-                        <label class="form-label text-white" for="usuario">Usuario</label>
+                        <label class="form-label text-white" for="usuario">Usuario</label><br>
+                        <label class="text-danger cambio-display" id="id-usuario" for="">El usuario debe tener al menos 6 caracteres</label>
+                        <label class="text-danger cambio-display" id="id-usuario2" for="">Este usuario ya existe</label>
                       </div>
 
                       <div class="form-outline mb-4">
                         <input type="email" id="idCorreo" name="correo" class="form-control input-mail"
                           placeholder="Correo Electrónico" />
-                        <label class="form-label text-white" for "correo">Correo Electrónico</label>
+                        <label class="form-label text-white">Correo Electrónico</label><br>
+                        <label class="text-danger cambio-display" id="id-correo" for="">Ingrese una direccion de correo valida</label>
                       </div>
 
                       <div class="form-outline mb-4">
                         <input type="password" id="idContra" name="contrasena" class="form-control input-contrasena"
                           placeholder="Contraseña" />
-                        <label class="form-label text-white" for="contrasena">Contraseña</label>
+                        <label class="form-label text-white" for="contrasena">Contraseña</label><br>
+                        <label class="text-danger cambio-display" id="id-contraseña" for="">La contraseña debe tener al menos 8 caracteres y un numero</label>
                       </div>
 
                       
                       <div class="form-outline mb-4">
                         <input type="password" id="idRContra" name="rContrasena" class="form-control input-rContrasena"
                           placeholder="Repetir Contraseña" />
-                        <label class="form-label text-white" for "rContrasena">Repetir Contraseña</label>
+                        <label class="form-label text-white">Repetir Contraseña</label><br>
+                        <label class="text-danger cambio-display" id="id-contraseña2" for="">la contraseña no coinciden</label>
                       </div>
 
                       <div class="text-center pt-1 mb-5 pb-1">

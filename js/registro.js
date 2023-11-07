@@ -3,6 +3,11 @@ const inputCorreo = document.getElementById('idCorreo');
 const inputContra = document.getElementById('idContra');
 const inputRContra = document.getElementById('idRContra');
 const botonReg = document.getElementById('botonReg');
+const usuarioPrimero=document.getElementById("id-usuario")
+const usuarioSegundo=document.getElementById("id-usuario2")
+const correvalido=document.getElementById("id-correo")
+const contraseñavalida=document.getElementById("id-contraseña")
+const contraseñavalidasegunda=document.getElementById("id-contraseña2")
 
 const objForm = {
   usuario: '',
@@ -18,25 +23,33 @@ const formValues = (ev) => {
 
 const validateForm = () => {
   const { usuario, correo, contrasena, rContrasena } = objForm;
-
+  usuarioSegundo.classList.add("cambio-display")
   if (usuario.length < 6) {
-    alert('El usuario debe tener al menos 6 caracteres.');
+    usuarioPrimero.classList.remove("cambio-display")
     return false;
+  }else{
+    usuarioPrimero.classList.add("cambio-display")
   }
 
   if (!validateEmail(correo)) {
-    alert('Por favor, ingresa una dirección de correo válida.');
+    correvalido.classList.remove("cambio-display")
     return false;
+  }else{
+    correvalido.classList.add("cambio-display")
   }
 
   if (contrasena.length < 8 || !/\d/.test(contrasena)) {
-    alert('La contraseña debe tener al menos 8 caracteres y al menos un número.');
+    contraseñavalida.classList.remove("cambio-display")
     return false;
+  }else{
+    contraseñavalida.classList.add("cambio-display")
   }
 
   if (contrasena !== rContrasena) {
-    alert('Las contraseñas no coinciden.');
+    contraseñavalidasegunda.classList.remove("cambio-display")
     return false;
+  }else{
+    contraseñavalidasegunda.classList.add("cambio-display")
   }
 
   return true;
@@ -59,9 +72,10 @@ const sendForm = (ev) => {
         const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
         const usuarioExist = usuarios.filter((usuarioLS) => usuarioLS.usuario === usuario);
         if (usuarioExist.length > 0) {
-          return alert('El usuario ya existe');
+          return usuarioSegundo.classList.remove("cambio-display")
         }
 
+     
         const nuevoUsuario = {
           id: usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1,
           usuario,
@@ -78,9 +92,8 @@ const sendForm = (ev) => {
         setTimeout(() => {
           location.href = './USUARIO/inicioUsuario.html';
         }, 1000);
-      } else {
-        alert('Las contraseñas no coinciden');
       }
+      
     }
   }
 };

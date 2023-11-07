@@ -16,6 +16,9 @@ body {
     background-position: center;
 }
 
+.cambio-display{
+    display: none;
+}
 
 .input-text {
     border: 0;
