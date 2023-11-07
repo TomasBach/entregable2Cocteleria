@@ -1,4 +1,4 @@
-const inputUsuario = document.getElementById('idUsuario');
+
 const inputCorreo = document.getElementById('idCorreo');
 const inputContra = document.getElementById('idContra');
 const inputRContra = document.getElementById('idRContra');
@@ -10,9 +10,8 @@ const contraseñavalida=document.getElementById("id-contraseña")
 const contraseñavalidasegunda=document.getElementById("id-contraseña2")
 
 const objForm = {
-  usuario: '',
-  correo: '',
-  contrasena: '',
+  mail: '',
+  contraseña: '',
   rContrasena: '',
 };
 
@@ -22,30 +21,25 @@ const formValues = (ev) => {
 };
 
 const validateForm = () => {
-  const { usuario, correo, contrasena, rContrasena } = objForm;
+  const {mail, contraseña, rContrasena } = objForm;
   usuarioSegundo.classList.add("cambio-display")
-  if (usuario.length < 6) {
-    usuarioPrimero.classList.remove("cambio-display")
-    return false;
-  }else{
-    usuarioPrimero.classList.add("cambio-display")
-  }
 
-  if (!validateEmail(correo)) {
+
+  if (!validateEmail(mail)) {
     correvalido.classList.remove("cambio-display")
     return false;
   }else{
     correvalido.classList.add("cambio-display")
   }
 
-  if (contrasena.length < 8 || !/\d/.test(contrasena)) {
+  if (contraseña.length < 8 || !/\d/.test(contraseña)) {
     contraseñavalida.classList.remove("cambio-display")
     return false;
   }else{
     contraseñavalida.classList.add("cambio-display")
   }
 
-  if (contrasena !== rContrasena) {
+  if (contraseña !== rContrasena) {
     contraseñavalidasegunda.classList.remove("cambio-display")
     return false;
   }else{
@@ -64,13 +58,13 @@ const sendForm = (ev) => {
   ev.preventDefault();
 
   if (validateForm()) {
-    // Resto del código para enviar el formulario
-    const { usuario, correo, contrasena, rContrasena } = objForm;
 
-    if (usuario && correo && contrasena && rContrasena) {
-      if (contrasena === rContrasena) {
+    const {mail, contraseña, rContrasena } = objForm;
+
+    if (mail && contraseña && rContrasena) {
+      if (contraseña === rContrasena) {
         const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        const usuarioExist = usuarios.filter((usuarioLS) => usuarioLS.usuario === usuario);
+        const usuarioExist = usuarios.filter((usuarioLS) => usuarioLS.mail === mail);
         if (usuarioExist.length > 0) {
           return usuarioSegundo.classList.remove("cambio-display")
         }
@@ -78,11 +72,11 @@ const sendForm = (ev) => {
      
         const nuevoUsuario = {
           id: usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1,
-          usuario,
-          correo,
-          contrasena,
+          mail,
+          contraseña,
           rol: 'usuario',
           login: true,
+          deleted: false,
         };
 
         usuarios.push(nuevoUsuario);
@@ -98,7 +92,6 @@ const sendForm = (ev) => {
   }
 };
 
-inputUsuario.addEventListener('input', formValues);
 inputCorreo.addEventListener('input', formValues);
 inputContra.addEventListener('input', formValues);
 inputRContra.addEventListener('input', formValues);
