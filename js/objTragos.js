@@ -5,7 +5,7 @@ const tragosObj = [
     {
         id: 1,
         name: 'Margarita',
-        img: '/IMAGENES/Margarita.png', 
+        img: '/IMAGENES/margarita1.png', 
         ingred: {
             ingred1: '3.5 cl de Tequila',
             ingred2: '2 cl de Cointreau',
@@ -17,7 +17,7 @@ const tragosObj = [
     {
         id: 2,
         name: 'Negroni',
-        img: '/IMAGENES/negroni-img.png',
+        img: '/IMAGENES/negroni.png',
         ingred:{
             ingred1: '3 cl de Ginebra',
             ingred2: '3 cl de Campari',
