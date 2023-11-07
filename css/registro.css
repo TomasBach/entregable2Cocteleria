@@ -1,39 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-.input-nombre,
+
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    background-image: url('/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+
+.input-usuario,
 .input-mail,
-.input-contrasena {
+.input-contrasena, 
+.input-rContrasena{
     border: 0;
     background: transparent;
     border: 1px solid white;
     color: white;
 }
 
-.input-nombre::placeholder,
+.input-usuario::placeholder,
 .input-mail::placeholder,
-.input-contrasena::placeholder {
+.input-contrasena::placeholder,
+.input-rContrasena::placeholder
+ {
     color: white;
 }
 
-.input-nombre:focus,
+.input-usuario:focus,
 .input-mail:focus,
-.input-contrasena:focus {
+.input-contrasena:focus, 
+.input-rContrasena:focus
+{
     background-color: black;
     color: white;
 }
 
+.logo img {
+    width: 185px
+}
+
 .gradient-form {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg');
-    background-size: cover;
-    background-position: center;
+
     max-width: 100%;
-    background-repeat: no-repeat;
+
     min-height: 100vh;
 }
 
 .formulario-registro {
-    background-color: rgb(17, 17, 17);
+    background-color: black;
+    overflow: hidden;
 }
 
 .titulo-registro {
@@ -61,6 +85,15 @@
     font-family: 'Kanit', sans-serif;
 }
 
+.warnings {
+    font-family: 'Kanit', sans-serif;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: red;
+    padding-top: 20px;   
+}
+
 @media (min-width: 768px) {
     .gradient-form {
         height: 100vh;
@@ -69,12 +102,7 @@
 
 @media (min-width: 768px) and (max-width: 990px) {
     .gradient-form {
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-            url('/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg');
-        background-size: cover;
-        background-position: center;
         max-width: 100%;
-        background-repeat: no-repeat;
         height: 100%;
         min-height: 100vh;
     }
