@@ -17,7 +17,7 @@ const tragosObj = [
     {
         id: 2,
         name: 'Negroni',
-        img: '/IMAGENES/Negroni-e1414258652370.jpg',
+        img: '/IMAGENES/negroni-img.png',
         ingred:{
             ingred1: '3 cl de Ginebra',
             ingred2: '3 cl de Campari',
@@ -28,7 +28,7 @@ const tragosObj = [
     {
         id: 3,
         name: 'Pisco Sour',
-        img: '/IMAGENES/Pisco-Sour.png',
+        img: '/IMAGENES/pisco-sour (1).png',
         ingred:{
             ingred1: '4,5 cl de Pisco',
             ingred2: '3 cl de Zumo de limón',
@@ -50,7 +50,7 @@ const tragosObj = [
     {
         id: 5,
         name: 'Caipirinha',
-        img: '/IMAGENES/Caipirinha.jpg',
+        img: '/IMAGENES/caiprihna-cocktail-salou-cocteleria.webp',
         ingred:{
             ingred1: '5 cl de Cachaça',
             ingred2: '1/2 de Lima cortada en cuartos',
@@ -83,7 +83,7 @@ const tragosObj = [
     {
         id: 8,
         name: 'Piña Colada',
-        img: '/IMAGENES/Piña-Colada.jpg',
+        img: '/IMAGENES/Piña-Colada.png',
         ingred:{
             ingred1: '3 cl de Ron blanco',
             ingred2: '3 cl de Leche de coco',
