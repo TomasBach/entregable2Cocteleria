@@ -1,4 +1,4 @@
-
+const cerrar=document.getElementById("cerrarTodo")
 let destacado = document.getElementById("contenido-destacado")
 let destacadoBotella = JSON.parse(localStorage.getItem("botellaDest"))||[]
 let destacadoTragos = JSON.parse(localStorage.getItem("tragoDest"))||[]
@@ -6,11 +6,6 @@ let categoriaVino = document.getElementById("categoria-vino")
 let categoriaLicor = document.getElementById("categoria-licor")
 let categoriaWhisky = document.getElementById("categoria-whisky")
 let categoriaTragos = document.getElementById("categoria-tragos")
-
-
-
-
-
 
 const paginavino = (event) => {
   event.preventDefault()
@@ -32,8 +27,6 @@ const paginatragos = (event) => {
   event.preventDefault()
   location.href=`/html/USUARIO/productosUsuario.html?Tipo=Tragos`
 }
-
-
 categoriaVino.addEventListener("click", paginavino)
 categoriaLicor.addEventListener("click", paginatequila)
 categoriaWhisky.addEventListener("click", paginawhisky)
