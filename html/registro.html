@@ -24,33 +24,45 @@
                 <div class="col-lg-6 formulario-registro">
                   <div class="card-body p-md-5 mx-md-4 ">
 
-                    <div class="text-center">
-                      <img
-                        src="/IMAGENES/Groovy-removebg-preview.png"
-                        style="width: 185px;" alt="logo">
+                    <div class="text-center logo">
+                      <img src="/IMAGENES/Groovy-removebg-preview.png" alt="logo">
                       <h4 class="mt-1 mb-5 pb-1 titulo-registro text-white">Regístrate en Sed de Uvas!</h4>
                     </div>
 
-                    <form class="formulario-registro">
+                    <form class="formulario-registro" id="formulario">
                       <p class="text-white">Regístrate</p>
 
                       <div class="form-outline mb-4">
-                        <input type="text" id="idnombre" class="form-control input-nombre" placeholder="Nombre" />
-                        <label class="form-label text-white" for="nombre">Nombre</label>
+                        <input type="text" id="idUsuario" name="usuario" class="form-control input-usuario" placeholder="usuario" />
+                        <label class="form-label text-white" for="usuario">Usuario</label><br>
+                        <label class="text-danger cambio-display" id="id-usuario" for="">El usuario debe tener al menos 6 caracteres</label>
+                        <label class="text-danger cambio-display" id="id-usuario2" for="">Este usuario ya existe</label>
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input type="email" id="idcorreo" class="form-control input-mail" placeholder="Correo Electrónico" />
-                        <label class="form-label text-white" for="correo">Correo Electrónico</label>
+                        <input type="email" id="idCorreo" name="correo" class="form-control input-mail"
+                          placeholder="Correo Electrónico" />
+                        <label class="form-label text-white">Correo Electrónico</label><br>
+                        <label class="text-danger cambio-display" id="id-correo" for="">Ingrese una direccion de correo valida</label>
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input type="password" id="idcontra" class="form-control input-contrasena" placeholder="Contraseña" />
-                        <label class="form-label text-white" for="contrasena">Contraseña</label>
+                        <input type="password" id="idContra" name="contrasena" class="form-control input-contrasena"
+                          placeholder="Contraseña" />
+                        <label class="form-label text-white" for="contrasena">Contraseña</label><br>
+                        <label class="text-danger cambio-display" id="id-contraseña" for="">La contraseña debe tener al menos 8 caracteres y un numero</label>
+                      </div>
+
+                      
+                      <div class="form-outline mb-4">
+                        <input type="password" id="idRContra" name="rContrasena" class="form-control input-rContrasena"
+                          placeholder="Repetir Contraseña" />
+                        <label class="form-label text-white">Repetir Contraseña</label><br>
+                        <label class="text-danger cambio-display" id="id-contraseña2" for="">la contraseña no coinciden</label>
                       </div>
 
                       <div class="text-center pt-1 mb-5 pb-1">
-                        <button class="btn btn-danger btn-block fa-lg button-registro mb-3 text-white" id="botonreg"
+                        <button class="btn btn-danger btn-block fa-lg button-registro mb-3 text-white" id="botonReg"
                           type="button">Registrarse</button>
                       </div>
 
@@ -62,9 +74,12 @@
                   <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                     <img class="w-100" src="/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg"
                       alt="">
-                    <p class="fs-5 mb-0 p-4 text-center">Sed de Uvas es una acogedora tienda de vinos y licores en general, que se
-                      especializa en ofrecer una cuidadosa selección de vinos de calidad, con un enfoque en los vinos argentinos. El
-                      ambiente rústico y cálido crea un espacio ideal para los amantes del vino y bebidas que desean explorar y
+                    <p class="fs-5 mb-0 p-4 text-center">Sed de Uvas es una acogedora tienda de vinos y licores en
+                      general, que se
+                      especializa en ofrecer una cuidadosa selección de vinos de calidad, con un enfoque en los vinos
+                      argentinos. El
+                      ambiente rústico y cálido crea un espacio ideal para los amantes del vino y bebidas que desean
+                      explorar y
                       disfrutar de las mejores cepas.</p>
                   </div>
                 </div>
@@ -77,8 +92,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
+    <script src="/js/registro.js"></script>
   </main>
-  <script src="/js/registro.js"></script>
 </body>
 
 </html>
