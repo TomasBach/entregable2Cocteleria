@@ -5,7 +5,7 @@ const incorrectocontraseña=document.getElementById("idusuario")
 const blanco=document.getElementById("idblanco")
 
 const objForm = {
-  usuario: '',
+  email: '',
   contrasena: '',
 };
 
@@ -15,9 +15,9 @@ const formValues = (ev) => {
 };
 
 const validateForm = () => {
-  const { usuario, contrasena } = objForm;
+  const {email, contrasena } = objForm;
 
-  if (usuario.trim() === '' || contrasena.trim() === '') {
+  if (email.trim() === '' || contrasena.trim() === '') {
     blanco.classList.remove("cambio-display")
     return false;
   }else{
@@ -32,16 +32,16 @@ const sendForm = (ev) => {
 
   if (validateForm()) {
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-    const usuarioExist = usuarios.filter((usuarioLS) => usuarioLS.usuario === objForm.usuario);
+    const usuarioExist = usuarios.filter((usuarioLS) => usuarioLS.mail === objForm.email);
 
     if (usuarioExist.length === 0) {
       incorrectocontraseña.classList.remove("cambio-display")
 
-    } else if (usuarioExist[0].contrasena === objForm.contrasena) {
+    } else if (usuarioExist[0].contraseña === objForm.contrasena && usuarioExist[0].deleted == false) {
       incorrectocontraseña.classList.add("cambio-display")
 
       usuarioExist[0].login = true;
-      console.log(objForm);
+     
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
       if (usuarioExist[0].rol === 'admin') {
@@ -50,7 +50,7 @@ const sendForm = (ev) => {
         location.href = './USUARIO/inicioUsuario.html';
       }
     } else {
-      alert('Usuario y/o contraseña incorrectos');
+      incorrectocontraseña.classList.remove("cambio-display")
     }
   }
 };
