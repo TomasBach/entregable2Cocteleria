@@ -90,5 +90,9 @@
         min-width:25vw;
         min-height:25vh;
     }
+    .body-404{
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+    }
   }
   
