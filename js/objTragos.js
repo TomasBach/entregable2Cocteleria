@@ -5,7 +5,7 @@ const tragosObj = [
     {
         id: 1,
         name: 'Margarita',
-        img: '/IMAGENES/Margarita.png', 
+        img: '/IMAGENES/margarita1.png', 
         ingred: {
             ingred1: '3.5 cl de Tequila',
             ingred2: '2 cl de Cointreau',
@@ -17,7 +17,7 @@ const tragosObj = [
     {
         id: 2,
         name: 'Negroni',
-        img: '/IMAGENES/negroni-img.png',
+        img: '/IMAGENES/negroni.png',
         ingred:{
             ingred1: '3 cl de Ginebra',
             ingred2: '3 cl de Campari',
@@ -50,7 +50,7 @@ const tragosObj = [
     {
         id: 5,
         name: 'Caipirinha',
-        img: '/IMAGENES/Caipirinha.jpg',
+        img: '/IMAGENES/caiprihna.webp',
         ingred:{
             ingred1: '5 cl de Cachaça',
             ingred2: '1/2 de Lima cortada en cuartos',
@@ -83,7 +83,7 @@ const tragosObj = [
     {
         id: 8,
         name: 'Piña Colada',
-        img: '/IMAGENES/p.jpeg',
+        img: '/IMAGENES/piñacolada.png',
         ingred:{
             ingred1: '3 cl de Ron blanco',
             ingred2: '3 cl de Leche de coco',
