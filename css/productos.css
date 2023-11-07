@@ -18,7 +18,9 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+.margin-cambios{
+    margin-top: 100px;
+}
 .color-cambio{
     background-color: rgb(20, 20, 20);
  border: 4px solid rgb(141, 97, 15);
