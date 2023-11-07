@@ -4,14 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Inicio Sesion</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
     
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+<<<<<<< HEAD
   <link rel="stylesheet" href="/css/login.css">
+=======
+  <link rel="stylesheet" href="/css/inicioSesion.css">
+>>>>>>> e8171d380d0ef2f5a468f6e32ead8ead5acf3b05
 </head>
 
 <body>
@@ -29,19 +33,27 @@
                       <img
                         src="/IMAGENES/Groovy-removebg-preview.png"
                         style="width: 185px;" alt="logo">
-                      <h4 class="mt-1 mb-5 pb-1 titulo-login text-white">Bienvenidos a Sedientas!</h4>
+                      <h4 class="mt-1 mb-5 pb-1 titulo-login text-white">Bienvenidos a Sed de Uvas!</h4>
                     </div>
 
                     <form class="formulario-login">
                       <p class="text-white">Ingresa tu cuenta</p>
 
                       <div class="form-outline mb-4">
-                        <input type="email" id="form2Example11" class="form-control input-mail" placeholder="Email" />
+
+                        <input type="email" id="form2Example11" class="form-control input-mail" placeholder="email" maxlength="30"/>
+
+                        
+
                         <label class="form-label text-white" for="form2Example11">Usuario</label>
                       </div>
 
                       <div class="form-outline mb-4">
-                        <input type="password" class="form-control input-contraseña"  placeholder="Contraseña" />
+
+                        <input type="password" class="form-control input-contraseña" maxlength="20" />
+
+                        
+
                         <label class="form-label text-white">Contraseña</label>
                       </div>
 
@@ -53,7 +65,7 @@
 
                       <div class="d-flex align-items-center justify-content-center pb-4 div-botonregistro">
                         <p class="mb-0 me-2 text-white">¿No tienes una cuenta?</p>
-                        <button type="button" class="btn btn-danger text-white">Regristrate</button>
+                        <a href="/html/registro.html"><button type="button" class="btn btn-danger text-white">Regristrate</button></a>
                       </div>
 
                     </form>
@@ -63,7 +75,7 @@
                 <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                   <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                     <img class="w-100"  src="/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg" alt="hola">
-                    <p class="fs-5 mb-0 p-4 text-center text-dark">"Sed de Uvas" es una acogedora tienda de vinos y licores en general, que se especializa en ofrecer una cuidadosa selección de vinos de calidad, con un enfoque en los vinos argentinos. El ambiente rústico y cálido crea un espacio ideal para los amantes del vino y bebidas que desean explorar y disfrutar de las mejores cepas.</p>
+                    <p class="fs-5 mb-0 p-4 text-center">Sed de Uvas es una acogedora tienda de vinos y licores en general, que se especializa en ofrecer una cuidadosa selección de vinos de calidad, con un enfoque en los vinos argentinos. El ambiente rústico y cálido crea un espacio ideal para los amantes del vino y bebidas que desean explorar y disfrutar de las mejores cepas.</p>
                   </div>
                 </div>
               </div>
@@ -76,6 +88,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
   </main>
+  <script src="/js/inicioSesion.js"></script>
 </body>
 
 </html>
