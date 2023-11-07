@@ -46,7 +46,7 @@ if(botellasLs.length === 0){
         id: 6,
         name: 'Vino Cordero Con Piel De Lobo Mb 750ml De Mosquita Muerta',
         licor: 'Vino',
-        img: '/IMAGENES/D_NQ_NP_2X_942605-MLA51527680357_092022-F.webp',
+        img: '/IMAGENES/vino-malbec-mosquita-muerta-cordero-con-piel-de-lobo-750-ml.jpg',
         price: '1.789',
         descrp: 'Un Malbec joven muy bien elaborado, diferente por su aroma y sabor a frutos maduros. Con una acidez justa deja en boca un picor agradable con un final reforzado por su paso por madera.',
     },
