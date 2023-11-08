@@ -52,32 +52,32 @@ tBodyTragosAdmin.innerHTML = tragos.map((trago) =>
                   <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                      <input type="text" class="form-control inputNameTrago"  aria-describedby="emailHelp" value="${trago.name}" name="nameTrago">
+                      <input type="text" class="form-control inputNameTrago" maxlength="50" minlength="5"  aria-describedby="emailHelp" value="${trago.name}" name="nameTrago">
                     </div>
                     <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Imagen</label>
-                    <input type="text" class="form-control inputImgTrago"  aria-describedby="emailHelp" value="Por ej: ${trago.img}" name="imagTrago">
+                    <input type="text" class="form-control inputImgTrago"  aria-describedby="emailHelp" maxlength="50" minlength="5" value="Por ej: ${trago.img}" name="imagTrago">
                   </div>
                     <h5 class="text-center">Ingrese los ingredientes del trago </h5>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 1</label>
-                      <input type="text" class="form-control inputIngred1" aria-describedby="emailHelp" value="${trago.ingred.ingred1}" name="ingrediente1">
+                      <input type="text" class="form-control inputIngred1" aria-describedby="emailHelp" maxlength="50" minlength="5" value="${trago.ingred.ingred1}" name="ingrediente1">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 2</label>
-                      <input type="text" class="form-control inputIngred2"  aria-describedby="emailHelp" value="${trago.ingred.ingred2}" name="ingrediente2">
+                      <input type="text" class="form-control inputIngred2"  aria-describedby="emailHelp" maxlength="50" minlength="5" value="${trago.ingred.ingred2}" name="ingrediente2">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 3</label>
-                      <input type="text" class="form-control inputIngred3" aria-describedby="emailHelp" value="${trago.ingred.ingred3}" name="ingrediente3">
+                      <input type="text" class="form-control inputIngred3" aria-describedby="emailHelp" maxlength="50" minlength="5" value="${trago.ingred.ingred3}" name="ingrediente3">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 4</label>
-                      <input type="text" class="form-control inputIngred4" aria-describedby="emailHelp" value="${trago.ingred.ingred4}" name="ingrediente4">
+                      <input type="text" class="form-control inputIngred4" aria-describedby="emailHelp" maxlength="50" minlength="5" value="${trago.ingred.ingred4}" name="ingrediente4">
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Ingrediente 5</label>
-                      <input type="text" class="form-control inputIngred5" aria-describedby="emailHelp" value="${trago.ingred.ingred5}" name="ingrediente5">
+                      <input type="text" class="form-control inputIngred5" aria-describedby="emailHelp" maxlength="50" minlength="5" value="${trago.ingred.ingred5}" name="ingrediente5">
                     </div>
                     
                     

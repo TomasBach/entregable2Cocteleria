@@ -82,12 +82,12 @@
                       <form>
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label text-light">Nombre</label>
-                          <input type="text" class="form-control" id="inputNameNBotella" name="nameNBotella">
+                          <input type="text" class="form-control" id="inputNameNBotella" maxlength="50" minlength="5" name="nameNBotella">
                         </div>
 
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label text-light">Descripcion</label>
-                          <input type="text" class="form-control" id="inputDescrpNBotella" name="descrpNBotella">
+                          <input type="text" class="form-control" id="inputDescrpNBotella" maxlength="450" minlength="10" name="descrpNBotella">
                         </div>
 
                         <div class="mb-3">
@@ -103,13 +103,13 @@
 
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label text-light">Precio</label>
-                          <input type="number" class="form-control text-light" id="inputPriceNBotella"
+                          <input type="number" class="form-control text-light" maxlength="10" minlength="3" id="inputPriceNBotella"
                             name="priceNBotella">
                         </div>
 
                         <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label text-light">Imagen</label>
-                          <input type="text" class="form-control" id="inputImgNBotella" aria-describedby="emailHelp"
+                          <input type="text" class="form-control" id="inputImgNBotella" maxlength="100" minlength="10" aria-describedby="emailHelp"
                             placeholder="URL ej: https://imagen.jpg" name="imgNBotella">
                         </div>
 
