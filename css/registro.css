@@ -1,64 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 html, body {
     overflow: hidden;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-  }
+    background-color: black;
+}
 
-  body {
+body {
     background-image: url('/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
-  
+    background-position: center;
+}
 
-.input-usuario,
+.cambio-display {
+    display: none;
+}
+
 .input-mail,
-.input-contrasena, 
-.input-rContrasena{
-    border: 0;
-    background: transparent;
+.input-contrasena,
+.input-rContrasena {
     border: 1px solid white;
+    background-color: rgb(17, 17, 17);
     color: white;
 }
 
-.input-usuario::placeholder,
 .input-mail::placeholder,
 .input-contrasena::placeholder,
-.input-rContrasena::placeholder
- {
+.input-rContrasena::placeholder {
     color: white;
 }
 
-.input-usuario:focus,
 .input-mail:focus,
-.input-contrasena:focus, 
-.input-rContrasena:focus
-{
+.input-contrasena:focus,
+.input-rContrasena:focus {
     background-color: black;
     color: white;
 }
 
 .logo img {
-    width: 185px
-}
-
-.gradient-form {
-
-    max-width: 100%;
-
-    min-height: 100vh;
+    width: 185px;
 }
 
 .formulario-registro {
-    background-color: black;
-    overflow: hidden;
+    background-color: rgb(17, 17, 17);
 }
 
 .titulo-registro {
     font-family: 'Kanit', sans-serif;
+    color: white;
 }
 
 .formulario-registro {
@@ -80,29 +74,4 @@ html, body {
 
 .div-botonregistro {
     font-family: 'Kanit', sans-serif;
-}
-
-.warnings {
-    font-family: 'Kanit', sans-serif;
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    color: red;
-    padding-top: 20px;   
-}
-.cambio-display{
-    display: none;
-}
-@media (min-width: 768px) {
-    .gradient-form {
-        height: 100vh;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 990px) {
-    .gradient-form {
-        max-width: 100%;
-        height: 100%;
-        min-height: 100vh;
-    }
 }
