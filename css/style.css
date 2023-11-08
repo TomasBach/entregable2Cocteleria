@@ -74,6 +74,18 @@
     background-size: 100vw 100vh;
 }
 
+.card-sobrenosotros{
+    width: 20rem;
+}
+.fondo-sobrenosotros{
+    background-color: #555555;
+    background-size: auto
+}
+.contenedor-sobrenosotros{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 @media(max-width:768px){
     .navbar-admin{
       width: 100vw;
