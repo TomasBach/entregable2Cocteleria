@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
-
 html, body {
     overflow: hidden;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-  }
+    background-color: black; /* Fondo negro */
+}
 
 body {
     background-image: url('/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg');
@@ -15,7 +14,8 @@ body {
     background-attachment: fixed;
     background-position: center;
 }
-.cambio-display{
+
+.cambio-display {
     display: none;
 }
 
