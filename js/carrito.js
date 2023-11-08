@@ -46,7 +46,7 @@ contenido.innerHTML = carritoLocalSt.map((product) =>
         <td>${product.licor}</td>
         <td product-id="${product.id}">$${product.price}</td>
         <td>
-         <input type="number" class="form-control w-25" value="1" id="${product.id}" min="0" name="count">
+         <input type="number" class="form-control w-25 text-center" value="1" id="${product.id}" min="0" name="count">
         </td>
         <td class="total" data-product-id="${product.id}">
           $${product.price}
