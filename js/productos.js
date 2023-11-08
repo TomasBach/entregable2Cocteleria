@@ -12,9 +12,9 @@ switch (categoria) {
         contenedor.innerHTML = tragos.map((elemento) =>
             `
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-                          <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+                          <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño " >
                             <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
-                            <div class="card-body">
+                            <div class="card-body cambio-letras">
                               <h5 class="card-title">${elemento.name}</h5>
                               <p class="card-text ">Ingredientes: <br>${elemento.ingred.ingred1}<br>${elemento.ingred.ingred2}<br> ${elemento.ingred.ingred3}</p>
                               <a href="#" class="boton3" onclick="cambioTrago(${elemento.id})">Ver Producto</a>
@@ -28,9 +28,9 @@ switch (categoria) {
             const filtroTragos=tragos.filter((elemento)=> elemento.name.toLowerCase().includes(ev.target.value.toLowerCase()))   
             contenedor.innerHTML=filtroTragos.map((trago)=>`
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-            <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+            <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño" >
               <img src="../..${trago.img}" class="card-img-top w-50" alt="...">
-              <div class="card-body">
+              <div class="card-body cambio-letras">
                 <h5 class="card-title">${trago.name}</h5>
                 <p class="card-text ">Ingredientes: <br>${trago.ingred.ingred1}<br>${trago.ingred.ingred2}<br> ${trago.ingred.ingred3}</p>
                 <a href="#" class="boton3" onclick="cambioTrago(${trago.id})">Ver Producto</a>
@@ -47,11 +47,11 @@ switch (categoria) {
         const vino = botellas.filter((elemento) => elemento.licor == categoria)
         contenedor.innerHTML = vino.map((elemento) =>
             `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-    <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+    <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño" >
       <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
-      <div class="card-body">
+      <div class="card-body cambio-letras">
         <h5 class="card-title">${elemento.name}</h5>
-        <p class="card-text ">${elemento.price}</p>
+        <p class="card-text ">$${elemento.price}</p>
         <a href="#" class="boton3" onclick="cambioBotella(${elemento.id})">Ver Producto</a>
       </div>
     </div>
@@ -61,11 +61,11 @@ switch (categoria) {
             const filtroTragos=vino.filter((elemento)=> elemento.name.toLowerCase().includes(ev.target.value.toLowerCase()))       
             contenedor.innerHTML=filtroTragos.map((botella)=>`
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-            <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+            <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño " >
               <img src="../..${botella.img}" class="card-img-top w-50" alt="...">
-              <div class="card-body">
+              <div class="card-body cambio-letras">
                 <h5 class="card-title">${botella.name}</h5>
-                <p class="card-text ">${botella.price}</p>
+                <p class="card-text ">$${botella.price}</p>
                 <a href="#" class="boton3" onclick="cambioBotella(${botella.id})">Ver Producto</a>
               </div>
             </div>
@@ -81,11 +81,11 @@ switch (categoria) {
 
         contenedor.innerHTML = whisky.map((elemento) =>
             `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-    <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+    <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño" >
       <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
-      <div class="card-body">
+      <div class="card-body cambio-letras">
         <h5 class="card-title">${elemento.name}</h5>
-        <p class="card-text ">${elemento.price}</p>
+        <p class="card-text ">$${elemento.price}</p>
         <a href="#" class="boton3" onclick="cambioBotella(${elemento.id})">Ver Producto</a>
       </div>
     </div>
@@ -97,11 +97,11 @@ switch (categoria) {
             const filtroTragos=whisky.filter((elemento)=> elemento.name.toLowerCase().includes(ev.target.value.toLowerCase()))       
             contenedor.innerHTML=filtroTragos.map((botella)=>`
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-            <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+            <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño ">
               <img src="../..${botella.img}" class="card-img-top w-50" alt="...">
-              <div class="card-body">
+              <div class="card-body cambio-letras">
                 <h5 class="card-title">${botella.name}</h5>
-                <p class="card-text ">${botella.price}</p>
+                <p class="card-text ">$${botella.price}</p>
                 <a href="#" class="boton3" onclick="cambioBotella(${botella.id})">Ver Producto</a>
               </div>
             </div>
@@ -118,11 +118,11 @@ switch (categoria) {
 
         contenedor.innerHTML = tequila.map((elemento) =>
             `<div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-        <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+        <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño" >
           <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
-          <div class="card-body">
+          <div class="card-body cambio-letras">
             <h5 class="card-title">${elemento.name}</h5>
-            <p class="card-text ">${elemento.price}</p>
+            <p class="card-text ">$${elemento.price}</p>
             <a href="#" class="boton3" onclick="cambioBotella(${elemento.id})">Ver Producto</a>
           </div>
         </div>
@@ -132,11 +132,11 @@ switch (categoria) {
             const filtroTragos=tequila.filter((elemento)=> elemento.name.toLowerCase().includes(ev.target.value.toLowerCase()))       
             contenedor.innerHTML=filtroTragos.map((botella)=>`
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-            <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+            <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño ">
               <img src="../..${botella.img}" class="card-img-top w-50" alt="...">
-              <div class="card-body">
+              <div class="card-body cambio-letras">
                 <h5 class="card-title">${botella.name}</h5>
-                <p class="card-text ">${botella.price}</p>
+                <p class="card-text ">$${botella.price}</p>
                 <a href="#" class="boton3" onclick="cambioBotella(${botella.id})">Ver Producto</a>
               </div>
             </div>
@@ -150,9 +150,9 @@ switch (categoria) {
     default:
         contenedor.innerHTML += tragos.map((elemento) => `
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-          <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+          <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño" >
             <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
-            <div class="card-body">
+            <div class="card-body cambio-letras">
               <h5 class="card-title">${elemento.name}</h5>
               <p class="card-text ">Ingredientes: <br>${elemento.ingred.ingred1}<br>${elemento.ingred.ingred2}<br> ${elemento.ingred.ingred3}</p>
               <a href="#" class="boton3" onclick="cambioTrago(${elemento.id})">Ver Producto</a>
@@ -163,11 +163,11 @@ switch (categoria) {
       `).join('');
         contenedor.innerHTML += botellas.map((elemento) => `
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-          <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+          <div class="card d-flex centrado color-cambio text-light text-center ">
             <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
-            <div class="card-body">
+            <div class="card-body cambio-letras">
               <h5 class="card-title">${elemento.name}</h5>
-              <p class="card-text ">${elemento.price}</p>
+              <p class="card-text ">$${elemento.price}</p>
               <a href="#" class="boton3" onclick="cambioBotella(${elemento.id})">Ver Producto</a>
             </div>
           </div>
@@ -178,12 +178,12 @@ switch (categoria) {
             contenedor.innerHTML=filtroproductos.map((botella)=>        
             `
             <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-            <div class="card d-flex centrado color-cambio text-light text-center " style="width: 18rem;">
+            <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño">
               <img src="../..${botella.img}" class="card-img-top w-50" alt="...">
-              <div class="card-body">
+              <div class="card-body cambio-letras">
                 <h5 class="card-title">${botella.name}</h5>
-                <p class="card-text ">${botella.price ? botella.price : `Ingredientes: <br>${botella.ingred.ingred1}<br>${botella.ingred.ingred2}<br> ${botella.ingred.ingred3}`}</p>
-                <a href="#" class="boton3" onclick="${botella.price ? `cambioBotella(${botella.id})` : `cambioTrago(${botella.id})`}">Ver Producto</a>
+                <p class="card-text ">$${botella.price ? botella.price : `Ingredientes: <br>${botella.ingred.ingred1}<br>${botella.ingred.ingred2}<br> ${botella.ingred.ingred3}`}</p>
+                <a href="#" class="boton3" onclick="$${botella.price ? `cambioBotella(${botella.id})` : `cambioTrago(${botella.id})`}">Ver Producto</a>
               </div>
             </div>
           </div>

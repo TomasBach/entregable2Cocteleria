@@ -43,19 +43,19 @@ tBodyBotellasAdmin.innerHTML = botellas.map((botella) =>
                   <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                      <input type="text" class="form-control inputNameBotella"  aria-describedby="emailHelp" value="${botella.name}" name="nameBotella">
+                      <input type="text" class="form-control inputNameBotella"  aria-describedby="emailHelp" maxlength="50" minlength="5" value="${botella.name}" name="nameBotella">
                     </div>
                     <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Imagen</label>
-                    <input type="text" class="form-control inputImgBotella"  aria-describedby="emailHelp" value="Por ej: ${botella.img}" name="imagBotella">
+                    <input type="text" class="form-control inputImgBotella"  aria-describedby="emailHelp" maxlength="50" minlength="5" value="Por ej: ${botella.img}" name="imagBotella">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Precio</label>
-                    <input type="text" class="form-control inputPriceBotella"  aria-describedby="emailHelp" value="$${botella.price}" name="priceBotella">
+                    <input type="text" class="form-control inputPriceBotella"  aria-describedby="emailHelp" maxlength="50" minlength="3" value="$${botella.price}" name="priceBotella">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Descripcion</label>
-                    <input type="text" class="form-control inputDescrpBotella"  aria-describedby="emailHelp"  value="${botella.descrp}" name="descrpBotella">
+                    <input type="text" class="form-control inputDescrpBotella"  aria-describedby="emailHelp" maxlength="450" minlength="5"  value="${botella.descrp}" name="descrpBotella">
                     
                   </div>
                   <div class="mb-3">

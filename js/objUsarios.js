@@ -5,7 +5,7 @@ if(usuariosLs.length === 0){
     {
        id: 1,
        mail: "admin@cocteleria.com",
-       contraseña:"administrador",
+       contraseña:"administrador1",
        login:false,
        role: "admin",
        deleted:false,
@@ -13,7 +13,7 @@ if(usuariosLs.length === 0){
     {
         id: 2,
         mail: "usuario@cocteleria.com",
-        contraseña:"usuario",
+        contraseña:"usuario1",
         login:false,
         role: "user",
         deleted :false,

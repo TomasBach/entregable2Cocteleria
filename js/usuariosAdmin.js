@@ -36,7 +36,7 @@ navbarAdminCantUsuarios.innerHTML =
                   <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Nombre</label>
-                      <input type="text" class="form-control inputMailUsuario"  aria-describedby="emailHelp" value="${usuario.mail}" name="mailUsuario">
+                      <input type="text" class="form-control inputMailUsuario"  aria-describedby="emailHelp" maxlength="50" minlength="10" value="${usuario.mail}" name="mailUsuario">
                     </div>
                     <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Role</label>

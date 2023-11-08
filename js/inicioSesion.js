@@ -42,7 +42,7 @@ const sendForm = (ev) => {
 
       usuarioExist[0].login = true;
      
-      localStorage.setItem('usuarios', JSON.stringify(usuarios));
+      localStorage.setItem('usuario', JSON.stringify(usuarioExist));
 
       if (usuarioExist[0].rol === 'admin') {
         location.href = './ADMIN/inicioAdmin.html';
