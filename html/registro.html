@@ -4,56 +4,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="keywords" content="cocteles, cocteleria, tragos, botellas, alcohol, bebidas, cocktail, barman, bartender, bar">
-  <meta name="description" content="En Sed de Uvas podrás encontrar la más grande variedad de botellas con el mejor precio del mercado y una gran variedad de tragos para que puedas hacerlos tú mismo en tu casa">
+  <meta name="description" content="En Sed de Uvas podrás encontrar la más grande variedad de botellas con el mejor precio del mercado y una gran variedad de tragos para que puedas hacerlos vos mismo en tu casa">
   <meta name="author" content="Tomas Bach, Rafael Merched, Nahuel Pumara">
   <meta name="copyright" content="SED DE UVAS .SRL">
   <link rel="icon" href="/IMAGENES/32269.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-    crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <title>SED DE UVAS REGISTRO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/registro.css">
 </head>
 
 <body>
-  
   <main>
     <section class="gradient-form">
-      <div class="container py-5">
+      <div class="container ">
         <div class="row d-flex justify-content-center align-items-center">
-          <div class="col-lg-8">
+          <div class="col-xl-10">
             <div class="card rounded-3 text-black">
               <div class="row g-0">
-                <div class="col-lg-12 formulario-registro">
-                  <div class="card-body p-md-4 mx-md-4">
+                <div class="col-lg-6 formulario-registro">
+                  <div class="card-body p-md-5 mx-md-4">
+
                     <div class="text-center logo">
                       <img src="/IMAGENES/Groovy-removebg-preview.png" alt="logo">
-                      <h4 class="mt-1 mb-4 pb-1 titulo-registro text-white">Regístrate en Sed de Uvas!</h4>
+                      <h4 class="mt-1 mb-5 pb-1 titulo-registro text-white">Regístrate en Sed de Uvas!</h4>
                     </div>
+
                     <form class="formulario-registro" id="formulario">
                       <p class="text-white">Regístrate</p>
-                      <div class="form-outline mb-3">
+
+                      <div class="form-outline mb-4">
                         <input type="email" id="idCorreo" name="mail" class="form-control input-mail"
                           placeholder="Correo Electrónico" />
-                        <label class="form-label text-white">Correo Electrónico</label>
+                        <label class="form-label text-white">Correo Electrónico</label><br>
+                        <label class="text-danger cambio-display" id="id-correo" for="">Ingrese una dirección de correo válida</label>
+                        <label class="text-danger cambio-display" id="id-usuario2" for="">Este correo ya existe</label>
                       </div>
-                      <div class="form-outline mb-3">
+
+                      <div class="form-outline mb-4">
                         <input type="password" id="idContra" name="contraseña" class="form-control input-contrasena"
                           placeholder="Contraseña" />
-                        <label class="form-label text-white" for="contrasena">Contraseña</label>
+                        <label class="form-label text-white" for="contrasena">Contraseña</label><br>
+                        <label class="text-danger cambio-display" id="id-contraseña" for="">La contraseña debe tener al menos 8 caracteres y un número</label>
                       </div>
-                      <div class="form-outline mb-3">
+
+                      <div class="form-outline mb-4">
                         <input type="password" id="idRContra" name="rContrasena" class="form-control input-rContrasena"
                           placeholder="Repetir Contraseña" />
-                        <label class="form-label text-white">Repetir Contraseña</label>
+                        <label class="form-label text-white">Repetir Contraseña</label><br>
+                        <label class="text-danger cambio-display" id="id-contraseña2" for="">Las contraseñas no coinciden</label>
                       </div>
-                      <div class="text-center pt-1 mb-3 pb-1">
-                        <button class="btn btn-danger btn-block fa-lg button-registro mb-2 text-white" id="botonReg"
+
+                      <div class="text-center pt-1 mb-5 pb-1">
+                        <button class="btn btn-danger btn-block fa-lg button-registro mb-3 text-white" id="botonReg"
                           type="button">Registrarse</button>
                       </div>
                     </form>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                  <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                    <img class="w-100"
+                      src="/IMAGENES/vista-posterior-cuatro-hombres-jovenes-bebiendo-cerveza.jpg" alt="">
+                    <p class="fs-5 mb-0 p-4 text-center">Sed de Uvas es una acogedora tienda de vinos y licores en
+                      general, que se especializa en ofrecer una cuidadosa selección de vinos de calidad, con un enfoque en los vinos
+                      argentinos. El ambiente rústico y cálido crea un espacio ideal para los amantes del vino y bebidas que desean
+                      explorar y disfrutar de las mejores cepas.</p>
                   </div>
                 </div>
               </div>
