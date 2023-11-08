@@ -74,7 +74,7 @@ const sendForm = (ev) => {
           id: usuarios.length > 0 ? usuarios[usuarios.length - 1].id + 1 : 1,
           mail,
           contraseña,
-          rol: 'usuario',
+          role: 'user',
           login: true,
           deleted: false,
         };

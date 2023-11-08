@@ -163,7 +163,7 @@ switch (categoria) {
       `).join('');
         contenedor.innerHTML += botellas.map((elemento) => `
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
-          <div class="card d-flex centrado color-cambio text-light text-center ">
+          <div class="card d-flex centrado color-cambio text-light text-center cambio-tamaño">
             <img src="../..${elemento.img}" class="card-img-top w-50" alt="...">
             <div class="card-body cambio-letras">
               <h5 class="card-title">${elemento.name}</h5>
