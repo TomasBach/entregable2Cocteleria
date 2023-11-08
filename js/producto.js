@@ -4,8 +4,6 @@ let botellas=JSON.parse(localStorage.getItem("botellas"))
 let trago=JSON.parse(localStorage.getItem("tragos"))
 let contenedor=document.getElementById("contenedor-producto")
 
-const favorites = JSON.parse(localStorage.getItem('favoritos')) || []
-
 if(tipo=="?trago"){
     let filtradotragos=trago.filter((elemento)=>elemento.id==id)
     contenedor.innerHTML=filtradotragos.map((elemento)=>
@@ -15,7 +13,7 @@ if(tipo=="?trago"){
             <div class="col-12 "> <h1 class="text-center titulo" >${elemento.name}</h1></div>
             <div class="col-12"> <div class="caja-parrafo"><p class="text-light mt-2 cambio-precio">Ingredientes : </p></div> 
                 <p class="parrafo-cambio">${elemento.ingred.ingred1} <br> ${elemento.ingred.ingred2} <br> ${elemento.ingred.ingred3} <br> ${elemento.ingred.ingred4} <br> ${elemento.ingred.ingred5} </p>
-                <div class="caja-boton"> <a class="boton-carro" onclick="favoritos(${elemento.id})">Agregar a favoritos</a></div>
+                <div class="caja-boton"> <a class="boton-carro" onclick="favoritostragos(${elemento.id})">Agregar a favoritos</a></div>
               
             </div>
         </div>
@@ -41,15 +39,62 @@ contenedor.innerHTML=filtradoBotella.map((elemento)=>
 
 
 const favoritos =(id)=>{
-location.href=`/html/USUARIO/carritoUsuario.html?botella=${id}`
+const favoritoBotella=JSON.parse(localStorage.getItem('favoritobotella')) || []
+if(favoritoBotella.length>0){
+const filtradoBotella=favoritoBotella.filter((prod)=>prod.id===id)
+if(filtradoBotella.length>0){
+    alert("este producto ya esta en favoritos")
+}else{
+    const filtradoBotella=botellas.filter((producto)=>producto.id==id)
+    favoritoBotella.push(filtradoBotella[0])
+    localStorage.setItem("favoritobotella",JSON.stringify(favoritoBotella))
+    alert("se agrego el producto a favoritos")
 }
+}else{
+    const filtradoBotella=botellas.filter((producto)=>producto.id==id)
+    favoritoBotella.push(filtradoBotella[0])
+    localStorage.setItem("favoritobotella",JSON.stringify(favoritoBotella))
+    alert("se agrego el producto a favoritos")
+}
+}
+const favoritostragos = (id) => {
+    const key = 'favoritotragos'
+    const favoritosTragos = JSON.parse(localStorage.getItem(key)) || []
+
+    if (favoritosTragos.length > 0) {
+        const filtradoTrago = favoritosTragos.filter((prod) => prod.id === id)
+
+        if (filtradoTrago.length > 0) {
+            alert("Este producto ya está en favoritos");
+        } else {
+            const filtradoTrago = trago.filter((producto) => producto.id == id)
+
+            if (filtradoTrago.length > 0) {
+                favoritosTragos.push(filtradoTrago[0]);
+                localStorage.setItem(key, JSON.stringify(favoritosTragos))
+                alert("Se agregó el producto a favoritos")
+            } else {
+                alert("Producto no encontrado")
+            }
+        }
+    } else {
+        const filtradoTrago = trago.filter((producto) => producto.id == id)
+
+        if (filtradoTrago.length > 0) {
+            favoritosTragos.push(filtradoTrago[0]);
+            localStorage.setItem(key, JSON.stringify(favoritosTragos))
+            alert("Se agregó el producto a favoritos")
+        } else {
+            alert("Producto no encontrado")
+        }
+    }
+}
+
 
 const carro = (id) =>{
     const carrito = JSON.parse(localStorage.getItem('carrito')) || []
     if(carrito.length>0){
-        console.log(id)
         const filtradoCarrito = carrito.filter((prod) => prod.id === id)
-        console.log(filtradoCarrito)
         if(filtradoCarrito.length > 0){
             alert("este producto ya esta en el carrito")
         }else{
