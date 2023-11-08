@@ -75,10 +75,12 @@
 }
 
 .card-sobrenosotros{
-    width: 20rem;
+    width: 100%;
+    text-align: end;
 }
 .fondo-sobrenosotros{
     background-color: #555555;
+
     background-size: auto
 }
 .contenedor-sobrenosotros{
