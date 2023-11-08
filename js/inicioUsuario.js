@@ -9,23 +9,23 @@ let categoriaTragos = document.getElementById("categoria-tragos")
 
 const paginavino = (event) => {
   event.preventDefault()
-  location.href=`/html/USUARIO/productosUsuario.html?licor=Vino`
+  location.href=`/html/USUARIO/productosusuario.html?licor=Vino`
 }
 
 
 const paginatequila = (event) => {
   event.preventDefault()
-  location.href=`/html/USUARIO/productosUsuario.html?licor=Tequila`
+  location.href=`/html/USUARIO/productosusuario.html?licor=Tequila`
 }
 
 const paginawhisky = (event) => {
   event.preventDefault()
-  location.href=`/html/USUARIO/productosUsuario.html?licor=Whisky`
+  location.href=`/html/USUARIO/productosusuario.html?licor=Whisky`
 }
 
 const paginatragos = (event) => {
   event.preventDefault()
-  location.href=`/html/USUARIO/productosUsuario.html?Tipo=Tragos`
+  location.href=`/html/USUARIO/productosusuario.html?Tipo=Tragos`
 }
 categoriaVino.addEventListener("click", paginavino)
 categoriaLicor.addEventListener("click", paginatequila)
