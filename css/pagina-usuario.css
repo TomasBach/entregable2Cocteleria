@@ -337,6 +337,10 @@ padding: 0;
 
   
   }
+ .cambio-letras img{
+    max-width: 100%;
+    height: auto;
+ }
   .centrar-caja{
     display: flex;
     justify-content: center;

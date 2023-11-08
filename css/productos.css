@@ -27,6 +27,10 @@ body{
     padding: 15px;
 
 }
+.cambio-tamaño{
+    width: 18rem;
+    height: 100%;
+}
 .boton3{
     text-decoration: none;
     color: #fdfdfd;
